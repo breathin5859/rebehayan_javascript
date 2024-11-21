@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼6</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <script defer src="./js/form6.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <form class="form6">
+        <fieldset>
+          <legend>주거적용</legend>
+          <div class="selected"></div>
+          <table width="100%" border="1">
+            <caption>
+              주거선택
+            </caption>
+            <colgroup>
+              <col style="width: 120px" />
+              <col />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>주거형태</th>
+                <td>
+                  <div><input type="checkbox" id="chk5_1" value="아파트" /><label for="chk5_1">아파트</label> <input type="checkbox" id="chk5_2" value="연립/빌라" checked /><label for="chk5_2">연립/빌라</label> <input type="checkbox" id="chk5_3" value="단독주택" /><label for="chk5_3">단독주택</label></div>
+                </td>
+              </tr>
+              <tr>
+                <th>분야</th>
+                <td>
+                  <div><input type="checkbox" id="chk6_1" value="리모델링" /><label for="chk6_1">리모델링</label> <input type="checkbox" id="chk6_2" value="키친&amp;바스" /><label for="chk6_2">키친&amp;바스</label> <input type="checkbox" id="chk6_3" value="빌트인수납" /><label for="chk6_3">빌트인수납</label> <input type="checkbox" id="chk6_4" value="가구" /><label for="chk6_4">가구</label></div>
+                </td>
+              </tr>
+              <tr>
+                <th>비용</th>
+                <td>
+                  <div><input type="checkbox" id="chk7_1" /><label for="chk7_1">500만원 미만</label> <input type="checkbox" id="chk7_2" /><label for="chk7_2">500~1000만원</label> <input type="checkbox" id="chk7_3" /><label for="chk7_3">1000~2000만원</label> <input type="checkbox" id="chk7_4" /><label for="chk7_4">2000~3000만원</label> <input type="checkbox" id="chk7_5" /><label for="chk7_5">3000~4000만원</label> <input type="checkbox" id="chk7_6" /><label for="chk7_6">4000~5000만원</label></div>
+                </td>
+              </tr>
+              <tr>
+                <th>스타일</th>
+                <td><input type="checkbox" id="chk8_1" /><label for="chk8_1">모던</label> <input type="checkbox" id="chk8_2" /><label for="chk8_2">클래식</label> <input type="checkbox" id="chk8_3" /><label for="chk8_3">내추럴</label> <input type="checkbox" id="chk8_4" checked /><label for="chk8_4">화이트</label> <input type="checkbox" id="chk8_5" /><label for="chk8_5">모노톤</label> <input type="checkbox" id="chk8_6" /><label for="chk8_6">파스텔</label> <input type="checkbox" id="chk8_7" /><label for="chk8_7">로맨틱</label> <input type="checkbox" id="chk8_8" /><label for="chk8_8">유니크</label></td>
+              </tr>
+              <tr>
+                <th>평형대</th>
+                <td><input type="checkbox" id="chk9_1" /><label for="chk9_1">20평형</label> <input type="checkbox" id="chk9_2" /><label for="chk9_2">30평형</label> <input type="checkbox" id="chk9_3" checked /><label for="chk9_3">40평형</label> <input type="checkbox" id="chk9_4" /><label for="chk9_4">50평형이상</label></td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="submit">선택 적용하기</button>
+          <button type="reset" class="btn-reset">초기화</button>
+        </fieldset>
+      </form>
+    </div>
+    <style>
+      .selected {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        span {
+          padding: 2px;
+          font-size: 14px;
+          color: gray;
+
+          &::before {
+            content: "#";
+            color: darkgrey;
+          }
+        }
+      }
+    </style>
+  </body>
+</html>

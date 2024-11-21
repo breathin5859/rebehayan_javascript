@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼10</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <script defer src="./js/form10.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <form>
+        <fieldset>
+          <legend>게시물 입력</legend>
+          <table border="1" width="100%">
+            <caption>
+              게시물 입력
+            </caption>
+            <colgroup>
+              <col style="width: 161px" />
+              <col />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>분류선택</th>
+                <td>
+                  <div class="radio-group"><input type="radio" name="rag1" id="ra2_1" /><label for="ra2_1">블로그 운영팁</label> <input type="radio" name="rag1" id="ra2_2" /><label for="ra2_2">블로그 소개</label> <input type="radio" name="rag1" id="ra2_3" /><label for="ra2_3">스킨</label> <input type="radio" name="rag1" id="ra2_4" /><label for="ra2_4">기타</label></div>
+                </td>
+              </tr>
+              <tr class="title">
+                <th><label for="txt2_1">제목</label></th>
+                <td>
+                  <input type="text" id="txt2_1" placeholder="제목을 입력하세요" />
+                  <span class="title-count">0/30</span>
+                </td>
+              </tr>
+              <tr class="content">
+                <th><label for="txt2_2">내용</label></th>
+                <td>
+                  <textarea id="txt2_2" placeholder="내용을 입력하세요"></textarea>
+                  <span class="content-count">0/1000</span>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="txt2_3">파일첨부</label></th>
+                <td>
+                  <input type="file" id="txt2_3" />
+                  사진은 3장까지만 첨부 가능합니다 (용량 10MB 미만)
+                  <button>첨부파일 추가</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="reset">취소</button>
+          <button type="submit">등록</button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

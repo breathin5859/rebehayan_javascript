@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding-inline: 40px;
+  height: 100vh;
+  align-content: center;
+  box-sizing: border-box;
+}
+
+a {
+  font-size: 20px;
+  border: 1px solid black;
+  padding: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  transition: 0.4s;
+  word-break: keep-all;
+  &:hover {
+    color: white;
+    background-color: #000;
+  }
+  &:nth-child(1) {
+    grid-column: 1/-1;
+  }
+}

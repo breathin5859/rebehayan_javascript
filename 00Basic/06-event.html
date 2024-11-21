@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <link rel="stylesheet" href="06-event.css" />
+    <script src="06-event.js" defer></script>
+  </head>
+
+  <body>
+    <div>
+      <button type="submit" class="click">Click</button>
+      <hr />
+      <button type="submit" class="enter">Mouse Enter</button>
+      <hr />
+      <button type="submit" class="leave">Mouse Leave</button>
+      <hr />
+      <form class="input">
+        <fieldset>
+          <legend>event input</legend>
+          <input type="text" />
+        </fieldset>
+      </form>
+      <form class="change">
+        <fieldset>
+          <legend>event change</legend>
+          <select name="" id="">
+            <option value="서울">서울</option>
+            <option value="대전">대전</option>
+            <option value="부산">부산</option>
+          </select>
+        </fieldset>
+      </form>
+      <form class="submit">
+        <fieldset>
+          <legend>event submit</legend>
+          <input type="text" class="id" placeholder="ID" />
+          <input type="text" class="nickname" placeholder="Nickname" />
+          <button type="submit">submit</button>
+          <!-- <button type="button">button</button> -->
+          <!-- 새로침 버튼은 안됨 -->
+          <a href="" class="link">이동</a>
+        </fieldset>
+      </form>
+      <form class="target">
+        <fieldset>
+          <legend>event target</legend>
+          <div class="parent" id="parent">
+            <button type="submit" id="child1">child1</button>
+            <button type="submit" id="child2">child2</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="log">
+      <h2>Event Log</h2>
+      <div class="message"></div>
+    </div>
+  </body>
+</html>

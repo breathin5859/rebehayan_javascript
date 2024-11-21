@@ -1,0 +1,40 @@
+.certification {
+  display: grid;
+  gap: 20px;
+  li {
+    display: flex;
+    gap: 10px;
+  }
+  input,
+  button {
+    height: 60px;
+    padding-inline: 20px;
+    border-radius: 600px;
+    font-size: 20px;
+  }
+  input {
+    border: 1px solid silver;
+    appearance: none;
+    &[type="number"] {
+      anchor-name: --number;
+    }
+  }
+  button {
+    color: white;
+    border: none;
+    background-color: black;
+    &:disabled {
+      cursor: not-allowed;
+      background-color: silver;
+    }
+  }
+}
+.counter {
+  position: absolute;
+  inset: anchor(--number top) anchor(--number right) auto auto;
+  z-index: 10px;
+  height: 60px;
+  padding-inline: 20px;
+  align-content: center;
+  color: silver;
+}

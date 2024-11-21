@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>콘텐츠1</title>
+  <link rel="stylesheet" href="./css/reset.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <ul class="payment-details">
+      <li>
+        <span>상품금액</span>
+        <div>13,620원</div>
+      </li>
+      <li>
+        <span>배송비</span>
+        <div>2,000원</div>
+      </li>
+      <li>
+        <span>소계</span>
+        <div>15,620원</div>
+      </li>
+      <li>
+        <span>총 결제 금액</span>
+        <div>원</div>
+      </li>
+    </ul>
+  </div>
+  <style>
+    .payment-details {
+      display: grid;
+      gap: 10px;
+      width: 300px;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+
+        &:last-child {
+          border-top: 1px solid silver;
+          padding-top: 10px;
+          font-weight: 700;
+
+          div {
+            color: orangered;
+          }
+        }
+      }
+
+      div {
+        color: midnightblue
+      }
+    }
+  </style>
+</body>
+
+</html>

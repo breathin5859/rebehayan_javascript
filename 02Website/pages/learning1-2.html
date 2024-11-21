@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rebehayan Learning Platform</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta property="og:type" content="페이지유형(website, mobile, video)" />
+    <meta property="og:site_name" content="사이트의 이름" />
+    <meta property="og:title" content="페이지 이름" />
+    <meta property="og:description" content="페이지 설명" />
+    <meta property="og:image" content="페이지 대표이미지" />
+    <meta property="og:url" content="페이지 주소" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__wrap">
+        <h1>
+          <a href=""><img src="../images/logo.svg" alt="Rebehayan Learning Platform" /></a>
+        </h1>
+        <nav class="gnb">
+          <ul>
+            <li>
+              <a href="">Rebehayan</a>
+              <div class="depth2">
+                <ul>
+                  <li><a href="">멘토</a></li>
+                  <li><a href="">멘티</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="">배움라운지</a>
+              <div class="depth2">
+                <ul>
+                  <li><a href="">콘텐츠 라운지</a></li>
+                  <li><a href="">DIY 라운지</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="">인(in)맥</a>
+              <div class="depth2">
+                <ul>
+                  <li><a href="">Mentoring</a></li>
+                  <li><a href="">Connecting </a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="">커뮤니티</a>
+              <div class="depth2">
+                <ul>
+                  <li><a href="">공지 Talk</a></li>
+                  <li><a href="">자유 Talk</a></li>
+                  <li><a href="">CEO Talk</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="profile">
+          <div class="profile__name"><strong>하성필님</strong> 안녕하세요!</div>
+          <button class="avatar" popovertarget="alram">
+            <img src="../images/@avatar.png" alt="" />
+            <span class="profile__alram"></span>
+          </button>
+          <div class="alram" id="alram" popover>
+            <ul>
+              <li>
+                <div class="alram__date">2021. 01. 28</div>
+                <div class="alram__writer">멘토</div>
+                <button class="alram__del">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path
+                      d="M8.22787 6.99535L13.737 1.495C13.9016 1.33033 13.9941 1.107 13.9941 0.874131C13.9941 0.641261 13.9016 0.417929 13.737 0.253265C13.5723 0.0886011 13.349 -0.00390625 13.1161 -0.00390625C12.8832 -0.00390625 12.6599 0.0886011 12.4952 0.253265L6.99489 5.76236L1.49454 0.253265C1.32987 0.0886011 1.10654 -0.00390604 0.87367 -0.00390604C0.6408 -0.00390604 0.417468 0.0886011 0.252804 0.253265C0.0881403 0.417929 -0.00436681 0.641261 -0.00436681 0.874131C-0.00436682 1.107 0.0881403 1.33033 0.252804 1.495L5.7619 6.99535L0.252804 12.4957C0.170843 12.577 0.105788 12.6737 0.0613928 12.7803C0.0169977 12.8868 -0.00585938 13.0011 -0.00585938 13.1166C-0.00585938 13.232 0.0169977 13.3463 0.0613928 13.4529C0.105788 13.5594 0.170843 13.6561 0.252804 13.7374C0.334097 13.8194 0.430813 13.8844 0.537374 13.9288C0.643935 13.9732 0.758231 13.9961 0.87367 13.9961C0.98911 13.9961 1.10341 13.9732 1.20997 13.9288C1.31653 13.8844 1.41324 13.8194 1.49454 13.7374L6.99489 8.22834L12.4952 13.7374C12.5765 13.8194 12.6732 13.8844 12.7798 13.9288C12.8864 13.9732 13.0007 13.9961 13.1161 13.9961C13.2315 13.9961 13.3458 13.9732 13.4524 13.9288C13.559 13.8844 13.6557 13.8194 13.737 13.7374C13.8189 13.6561 13.884 13.5594 13.9284 13.4529C13.9728 13.3463 13.9956 13.232 13.9956 13.1166C13.9956 13.0011 13.9728 12.8868 13.9284 12.7803C13.884 12.6737 13.8189 12.577 13.737 12.4957L8.22787 6.99535Z"
+                      fill="#999999"
+                    />
+                  </svg>
+                </button>
+                <div class="alram__content">
+                  홍길동님이 세우신 성장계획에 여유가 없네요<br />
+                  여유를 가지고 계획을 세워 보는건 어떨까요?
+                </div>
+              </li>
+              <li>
+                <div class="alram__date">2021. 01. 28</div>
+                <div class="alram__writer">멘토</div>
+                <button class="alram__del">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path
+                      d="M8.22787 6.99535L13.737 1.495C13.9016 1.33033 13.9941 1.107 13.9941 0.874131C13.9941 0.641261 13.9016 0.417929 13.737 0.253265C13.5723 0.0886011 13.349 -0.00390625 13.1161 -0.00390625C12.8832 -0.00390625 12.6599 0.0886011 12.4952 0.253265L6.99489 5.76236L1.49454 0.253265C1.32987 0.0886011 1.10654 -0.00390604 0.87367 -0.00390604C0.6408 -0.00390604 0.417468 0.0886011 0.252804 0.253265C0.0881403 0.417929 -0.00436681 0.641261 -0.00436681 0.874131C-0.00436682 1.107 0.0881403 1.33033 0.252804 1.495L5.7619 6.99535L0.252804 12.4957C0.170843 12.577 0.105788 12.6737 0.0613928 12.7803C0.0169977 12.8868 -0.00585938 13.0011 -0.00585938 13.1166C-0.00585938 13.232 0.0169977 13.3463 0.0613928 13.4529C0.105788 13.5594 0.170843 13.6561 0.252804 13.7374C0.334097 13.8194 0.430813 13.8844 0.537374 13.9288C0.643935 13.9732 0.758231 13.9961 0.87367 13.9961C0.98911 13.9961 1.10341 13.9732 1.20997 13.9288C1.31653 13.8844 1.41324 13.8194 1.49454 13.7374L6.99489 8.22834L12.4952 13.7374C12.5765 13.8194 12.6732 13.8844 12.7798 13.9288C12.8864 13.9732 13.0007 13.9961 13.1161 13.9961C13.2315 13.9961 13.3458 13.9732 13.4524 13.9288C13.559 13.8844 13.6557 13.8194 13.737 13.7374C13.8189 13.6561 13.884 13.5594 13.9284 13.4529C13.9728 13.3463 13.9956 13.232 13.9956 13.1166C13.9956 13.0011 13.9728 12.8868 13.9284 12.7803C13.884 12.6737 13.8189 12.577 13.737 12.4957L8.22787 6.99535Z"
+                      fill="#999999"
+                    />
+                  </svg>
+                </button>
+                <div class="alram__content">
+                  홍길동님이 세우신 성장계획에 여유가 없네요<br />
+                  여유를 가지고 계획을 세워 보는건 어떨까요?
+                </div>
+              </li>
+              <li>
+                <div class="alram__date">2021. 01. 28</div>
+                <div class="alram__writer">멘토</div>
+                <button class="alram__del">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path
+                      d="M8.22787 6.99535L13.737 1.495C13.9016 1.33033 13.9941 1.107 13.9941 0.874131C13.9941 0.641261 13.9016 0.417929 13.737 0.253265C13.5723 0.0886011 13.349 -0.00390625 13.1161 -0.00390625C12.8832 -0.00390625 12.6599 0.0886011 12.4952 0.253265L6.99489 5.76236L1.49454 0.253265C1.32987 0.0886011 1.10654 -0.00390604 0.87367 -0.00390604C0.6408 -0.00390604 0.417468 0.0886011 0.252804 0.253265C0.0881403 0.417929 -0.00436681 0.641261 -0.00436681 0.874131C-0.00436682 1.107 0.0881403 1.33033 0.252804 1.495L5.7619 6.99535L0.252804 12.4957C0.170843 12.577 0.105788 12.6737 0.0613928 12.7803C0.0169977 12.8868 -0.00585938 13.0011 -0.00585938 13.1166C-0.00585938 13.232 0.0169977 13.3463 0.0613928 13.4529C0.105788 13.5594 0.170843 13.6561 0.252804 13.7374C0.334097 13.8194 0.430813 13.8844 0.537374 13.9288C0.643935 13.9732 0.758231 13.9961 0.87367 13.9961C0.98911 13.9961 1.10341 13.9732 1.20997 13.9288C1.31653 13.8844 1.41324 13.8194 1.49454 13.7374L6.99489 8.22834L12.4952 13.7374C12.5765 13.8194 12.6732 13.8844 12.7798 13.9288C12.8864 13.9732 13.0007 13.9961 13.1161 13.9961C13.2315 13.9961 13.3458 13.9732 13.4524 13.9288C13.559 13.8844 13.6557 13.8194 13.737 13.7374C13.8189 13.6561 13.884 13.5594 13.9284 13.4529C13.9728 13.3463 13.9956 13.232 13.9956 13.1166C13.9956 13.0011 13.9728 12.8868 13.9284 12.7803C13.884 12.6737 13.8189 12.577 13.737 12.4957L8.22787 6.99535Z"
+                      fill="#999999"
+                    />
+                  </svg>
+                </button>
+                <div class="alram__content">
+                  홍길동님이 세우신 성장계획에 여유가 없네요<br />
+                  여유를 가지고 계획을 세워 보는건 어떨까요?
+                </div>
+              </li>
+              <li>
+                <div class="alram__date">2021. 01. 28</div>
+                <div class="alram__writer">멘토</div>
+                <button class="alram__del">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path
+                      d="M8.22787 6.99535L13.737 1.495C13.9016 1.33033 13.9941 1.107 13.9941 0.874131C13.9941 0.641261 13.9016 0.417929 13.737 0.253265C13.5723 0.0886011 13.349 -0.00390625 13.1161 -0.00390625C12.8832 -0.00390625 12.6599 0.0886011 12.4952 0.253265L6.99489 5.76236L1.49454 0.253265C1.32987 0.0886011 1.10654 -0.00390604 0.87367 -0.00390604C0.6408 -0.00390604 0.417468 0.0886011 0.252804 0.253265C0.0881403 0.417929 -0.00436681 0.641261 -0.00436681 0.874131C-0.00436682 1.107 0.0881403 1.33033 0.252804 1.495L5.7619 6.99535L0.252804 12.4957C0.170843 12.577 0.105788 12.6737 0.0613928 12.7803C0.0169977 12.8868 -0.00585938 13.0011 -0.00585938 13.1166C-0.00585938 13.232 0.0169977 13.3463 0.0613928 13.4529C0.105788 13.5594 0.170843 13.6561 0.252804 13.7374C0.334097 13.8194 0.430813 13.8844 0.537374 13.9288C0.643935 13.9732 0.758231 13.9961 0.87367 13.9961C0.98911 13.9961 1.10341 13.9732 1.20997 13.9288C1.31653 13.8844 1.41324 13.8194 1.49454 13.7374L6.99489 8.22834L12.4952 13.7374C12.5765 13.8194 12.6732 13.8844 12.7798 13.9288C12.8864 13.9732 13.0007 13.9961 13.1161 13.9961C13.2315 13.9961 13.3458 13.9732 13.4524 13.9288C13.559 13.8844 13.6557 13.8194 13.737 13.7374C13.8189 13.6561 13.884 13.5594 13.9284 13.4529C13.9728 13.3463 13.9956 13.232 13.9956 13.1166C13.9956 13.0011 13.9728 12.8868 13.9284 12.7803C13.884 12.6737 13.8189 12.577 13.737 12.4957L8.22787 6.99535Z"
+                      fill="#999999"
+                    />
+                  </svg>
+                </button>
+                <div class="alram__content">
+                  홍길동님이 세우신 성장계획에 여유가 없네요<br />
+                  여유를 가지고 계획을 세워 보는건 어떨까요?
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="visual">
+        <h2 class="visual__title">배움라운지</h2>
+        <p class="visual__text">
+          Rebehayan은 콘텐츠 경쟁력을 바탕으로 국내외 성장을 지속하고 있습니다.<br />
+          공정한 IR 커뮤니케이션을 통해 투자가 여러분과 함께하겠습니다.
+        </p>
+      </div>
+      <div class="container">
+        <!-- 본문 시작 -->
+        <div class="lounge_header">
+          <div>
+            <h3 class="heading md"><span class="subtitle">EDM 추천 프로그램</span>CONTENTS LOUNGE</h3>
+            <nav class="lounge-nav">
+              <ul>
+                <li>
+                  <button>인문학</button>
+                  <ul>
+                    <li><a href="">인문/문화/예술</a></li>
+                    <li><a href="">사회/경제/정치/역사</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <button>인사이트</button>
+                  <ul>
+                    <li><a href="">전시/공연</a></li>
+                    <li><a href="">컨퍼런스/세미나</a></li>
+                    <li><a href="">구독서비스</a></li>
+                    <li><a href="">사내프로그램/기타</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <button>리더십</button>
+                  <ul>
+                    <li><a href="">자기관리 (Self)</a></li>
+                    <li><a href="">사람 (People)</a></li>
+                    <li><a href="">조직 (Organization)</a></li>
+                    <li><a href="">업무(Task)</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <button>비즈니스</button>
+                  <ul>
+                    <li><a href="">경영일반</a></li>
+                    <li><a href="">사업 트렌드</a></li>
+                    <li><a href="">직무</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <button>글로벌</button>
+                  <ul>
+                    <li><a href="">어학</a></li>
+                    <li><a href="">글로벌비즈니스</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <h3 class="heading md"><span class="subtitle">내가 설계하는 프로그램</span>DIY LOUNGE</h3>
+            <a href="" class="btn-apply">신청하기</a>
+          </div>
+        </div>
+        <div class="align both">
+          <div class="search">
+            <input type="search" placeholder="상급매니저프로그램" />
+            <button aria-label="검색"></button>
+          </div>
+          <div class="sort">
+            <button class="--active">인기</button>
+            <button>최신</button>
+            <button>크레딧</button>
+          </div>
+        </div>
+        <div class="lounge-view">
+          <div class="gallery">
+            <img src="../images/@thumbnail2.png" alt="" />
+            <button><img src="../images/@thumbnail.png" alt="" /></button>
+            <button><img src="../images/@avatar.png" alt="" /></button>
+            <button><img src="../images/visual_index.png" alt="" /></button>
+            <button><img src="../images/img_visual1.png" alt="" /></button>
+            <button><img src="../images/@thumbnail2.png" alt="" /></button>
+          </div>
+          <div>
+            <span class="badge purple">글로벌</span>
+            <h3 class="heading base">중견사원 셀프 리더십 및 역할행동 향상 과정(SBC)</h3>
+            <div class="hash">
+              <span>#역활변화</span>
+              <span>#셀프리더십</span>
+              <span>#SBC</span>
+            </div>
+            <h4 class="heading sm">주요내용(요약)</h4>
+            <p class="text-type2">
+              셀프리더십이란 자기 자신에게 지속적인 영향력을 줄 수 있는 역량을 소비하고 있는 능력을 말합니다. 지속적인 영향력을 위해 꾸준히 동기부여하고, 그 동기부여의 효과가 외부환경에서 채워질
+              것이라는 기대 이외에 자신의 내부 환경 안에서 컨트롤 하여 채워나갈 수 있는 능력을 확립하는 과정입니다.
+            </p>
+            <div class="lounge-view__btm">
+              <ul class="list-type3">
+                <li>추천대상 : G4 이상.</li>
+                <li>학습형태 : 온라인 / 오프라인 / 온+오프라인</li>
+                <li>학습시간(일수) : 8시간 / 2일</li>
+                <li>교육일정 : 2021.04.20 ~ 2021.04.21</li>
+                <li class="text-red">신청기간 : 2021.04.15 ~ 2021.04.19</li>
+              </ul>
+              <div class="badge coin">150</div>
+            </div>
+            <button class="btn base pink rounded">교육신청</button>
+            <button class="btn base white rounded ico1">즐겨찾기</button>
+          </div>
+        </div>
+        <div class="lounge-details">
+          프로그램 상세 정보<br />
+          (주차 별 커리큘럼 정보 및 강사 소개 등 정보 확산)
+        </div>
+        <div class="comment">
+          <div class="comment__count">7개의 댓글이 있습니다.</div>
+          <ul class="comment__list">
+            <li>
+              <div class="avatar">
+                <img src="../images/@avatar.png" alt="" />
+              </div>
+              <div class="comment__info">
+                <div class="comment__name">Chwwwl8007</div>
+                <div class="comment__date">2020.12.23. 14:34</div>
+                <div class="comment__btn">
+                  <button>댓글쓰기</button>
+                  <button>글삭제</button>
+                </div>
+                <div class="comment__content">
+                  경험하지 못한 세계의 명확한 그림이 그려졌습니다.<br />
+                  특히 방향성을 찾아야 한다는 말씀은 정말 많이 와닿았습니다.
+                </div>
+              </div>
+              <ul>
+                <li>
+                  <div class="avatar">
+                    <img src="../images/@avatar.png" alt="" />
+                  </div>
+                  <div class="comment__info">
+                    <div class="comment__name">Chwwwl8007</div>
+                    <div class="comment__date">2020.12.23. 14:34</div>
+                    <div class="comment__btn">
+                      <button>댓글쓰기</button>
+                      <button>글삭제</button>
+                    </div>
+                    <div class="comment__content">
+                      경험하지 못한 세계의 명확한 그림이 그려졌습니다.<br />
+                      특히 방향성을 찾아야 한다는 말씀은 정말 많이 와닿았습니다.
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="avatar">
+                <img src="../images/@avatar.png" alt="" />
+              </div>
+              <div class="comment__info">
+                <div class="comment__name">Chwwwl8007</div>
+                <div class="comment__date">2020.12.23. 14:34</div>
+                <div class="comment__btn">
+                  <button>댓글쓰기</button>
+                  <button>글삭제</button>
+                </div>
+                <div class="comment__content">
+                  경험하지 못한 세계의 명확한 그림이 그려졌습니다.<br />
+                  특히 방향성을 찾아야 한다는 말씀은 정말 많이 와닿았습니다.
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="comment__write">
+            <textarea placeholder="댓글을 입력하세요."></textarea>
+            <button class="btn-emoji" aria-label="이모티콘"></button>
+            <button class="btn-write" aria-label="댓글작성"></button>
+          </div>
+        </div>
+
+        <!-- 본문 끝 -->
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div>
+          <nav>
+            <ul class="footer-nav">
+              <li><a href="">법적고지</a></li>
+              <li><a href="">영상정보처리기기운영/관리방침</a></li>
+              <li><a href="">이용약관</a></li>
+              <li><a href="">이메일무단수집거부 </a></li>
+              <li><a href="">찾아오시는길</a></li>
+            </ul>
+          </nav>
+          <button popovertarget="family" class="btn-family">
+            <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.5" y="1.25586" width="25.8223" height="26.2461" stroke="#E1E1E1" />
+              <path d="M14.3545 13.4287H16.8223V15.2129H14.3545V18.002H12.4746V15.2129H10V13.4287H12.4746V10.7559H14.3545V13.4287Z" fill="#666666" />
+            </svg>
+            FAMILY SITE
+          </button>
+          <div id="family" popover class="family-list">
+            <ul>
+              <li><a href="">YOUTUBE</a></li>
+              <li><a href="">KAKAO</a></li>
+              <li><a href="">GOOGLE</a></li>
+              <li><a href="">NAVER</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div>
+          <ul class="company-list">
+            <li><strong>Rebehayan</strong><span> : 서울시 서초구 871-13</span></li>
+            <li><strong>Rebehayan 교육</strong><span> : 서울시 마포구 68</span></li>
+            <li><strong>대표이사</strong><span> : 하성필</span></li>
+            <li><strong>사업자등록번호</strong><span> : 741-81-51510</span></li>
+          </ul>
+          <div class="footer__copyright">&copy; Rebehayan. All Rights Reserved.</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

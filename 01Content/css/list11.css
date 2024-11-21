@@ -1,0 +1,11 @@
+.submenu {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: 0.5s;
+  &.hide {
+    grid-template-rows: 0fr;
+  }
+  ul {
+    overflow: hidden;
+  }
+}

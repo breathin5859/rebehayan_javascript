@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>표4</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <script defer src="./js/popup.js"></script>
+  </head>
+
+  <body>
+    <button class="btn-open">팝업열기</button>
+    <dialog class="popup">
+      팝업내용1
+      <button class="btn-close">팝업닫기</button>
+    </dialog>
+    <button class="btn-open" data-dialog-open="popup">팝업열기</button>
+    <dialog class="popup" data-dialog="popup">
+      팝업내용2
+      <button class="btn-close" data-dialog-close="popup">팝업닫기</button>
+    </dialog>
+    <style>
+      dialog {
+        inset: 50% auto auto 50%;
+        translate: -50% -50%;
+      }
+    </style>
+  </body>
+</html>

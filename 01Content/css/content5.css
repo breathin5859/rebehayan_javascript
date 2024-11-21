@@ -1,0 +1,36 @@
+.service-list {
+  display: grid;
+  gap: 20px;
+  a {
+    display: block;
+    border-radius: 20px;
+    padding: 40px 120px 40px 150px;
+    border: 2px solid #cacaca;
+    background: linear-gradient(#dee9e3, #dee9e3) no-repeat 120px center / 2px 76px, url(../images/arrow-right-gray.svg) no-repeat right 40px center;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.06);
+  }
+  .title {
+    color: #333;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -1.6px;
+  }
+  .description {
+    color: #828785;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -1.2px;
+  }
+  li {
+    background: no-repeat 40px center;
+    &:nth-child(1) {
+      background-image: url(../images/ico_content5-1.svg);
+    }
+    &:nth-child(2) {
+      background-image: url(../images/ico_content5-2.svg);
+    }
+    &:nth-child(3) {
+      background-image: url(../images/ico_content5-3.svg);
+    }
+  }
+}

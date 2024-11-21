@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100vh;
+  padding: 20px;
+  gap: 20px;
+  box-sizing: border-box;
+}
+:is(hr, form) {
+  margin-block: 1rem;
+}
+
+button {
+  border-radius: 1000px;
+  padding: 10px 30px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  background-color: coral;
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+fieldset {
+  border: 2px solid silver;
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+  legend {
+    font-size: 20px;
+    padding-inline: 15px;
+  }
+  :is(input, select) {
+    height: 49px;
+    border: 3px solid coral;
+    border-radius: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 20px;
+    font-size: 20px;
+  }
+}
+h2 {
+  font-size: 16px;
+}
+.log {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  align-items: start;
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: white;
+  border: 2px solid silver;
+  overflow: auto;
+  scrollbar-width: thin;
+  padding: 10px;
+  height: 90vh;
+  box-sizing: border-box;
+  align-self: start;
+  div {
+    animation: fade 1 1.5s both;
+    line-height: 1.8;
+    word-break: break-all;
+    padding: 10px;
+    color: #000;
+    background-color: #d6d6d6;
+    border-radius: 10px;
+  }
+}
+.target {
+  div {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+@keyframes fade {
+  100% {
+    opacity: 0.5;
+  }
+}

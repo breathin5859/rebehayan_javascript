@@ -1,0 +1,39 @@
+.shop-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 100px;
+  img {
+    display: block;
+    margin-inline: auto;
+  }
+  .title {
+    padding-top: 23px;
+    font-size: 18px;
+    letter-spacing: -0.9px;
+  }
+
+  ul {
+    padding-top: 13px;
+    li {
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      span {
+        &:first-child {
+          color: #000;
+          font-size: 14px;
+          line-height: 22px;
+          letter-spacing: -0.7px;
+        }
+        &:last-child {
+          color: #898989;
+          font-size: 14px;
+          line-height: 22px;
+          letter-spacing: -0.7px;
+          &.blue {
+            color: #009bfa;
+          }
+        }
+      }
+    }
+  }
+}

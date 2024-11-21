@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rebehayan Learning Platform</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta property="og:type" content="페이지유형(website, mobile, video)" />
+    <meta property="og:site_name" content="사이트의 이름" />
+    <meta property="og:title" content="페이지 이름" />
+    <meta property="og:description" content="페이지 설명" />
+    <meta property="og:image" content="페이지 대표이미지" />
+    <meta property="og:url" content="페이지 주소" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header class="header"></header>
+    <main>
+      <div class="visual">
+        <h2 class="visual__title">배움라운지</h2>
+        <p class="visual__text">
+          Rebehayan은 콘텐츠 경쟁력을 바탕으로 국내외 성장을 지속하고 있습니다.<br />
+          공정한 IR 커뮤니케이션을 통해 투자가 여러분과 함께하겠습니다.
+        </p>
+      </div>
+      <div class="container">
+        <!-- 본문 시작 -->
+        <h2>Form 가이드</h2>
+        <h3>원자 정의</h3>
+        <div class="copy-wrap">
+          <button class="btn-copy">복사</button>
+          <input class="input" type="text" />
+        </div>
+        <div class="copy-wrap">
+          <button class="btn-copy">복사</button>
+          <select class="select">
+            <option>선택</option>
+          </select>
+        </div>
+        <div class="copy-wrap">
+          <button class="btn-copy">복사</button>
+          <textarea class="textarea"></textarea>
+        </div>
+        <h3>분자 정의</h3>
+        <div class="copy">
+          <div class="form-date">
+            <input type="text" placeholder="YYYY.MM.DD" class="input" name="" id="" />
+            <select class="select">
+              <option>00</option>
+            </select>
+            <select class="select">
+              <option>00</option>
+            </select>
+          </div>
+        </div>
+        <div class="copy"></div>
+        <div class="form-text">
+          <select id="select1" class="select">
+            <option>선택</option>
+          </select>
+          <label for="select1">일</label>
+        </div>
+
+        <div class="address" style="--w: 800px">
+          <input type="number" class="input" placeholder="우편번호" />
+          <button>주소검색</button>
+          <input type="text" placeholder="주소" class="input" />
+          <input type="text" placeholder="상세주소" class="input" />
+        </div>
+
+        <h3>유기체 정의</h3>
+        <div class="form-date-group">
+          <div class="form-date">
+            <input type="text" placeholder="YYYY.MM.DD" class="input" name="" id="" />
+            <select class="select">
+              <option>00</option>
+            </select>
+            <select class="select">
+              <option>00</option>
+            </select>
+          </div>
+          ~
+          <div class="form-date">
+            <input type="text" placeholder="YYYY.MM.DD" class="input" name="" id="" />
+            <select class="select">
+              <option>00</option>
+            </select>
+            <select class="select">
+              <option>00</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-text-group">
+          <div class="form-text">
+            <select id="select2" class="select">
+              <option>선택</option>
+            </select>
+            <label for="select2">일</label>
+          </div>
+          <div class="form-text">
+            <input type="text" id="text1" style="--width: 120px" class="input" />
+            <label for="text1">시간</label>
+          </div>
+        </div>
+
+        <h2>버튼 가이드</h2>
+        <h3>원자정의</h3>
+        <h4>버튼 크기</h4>
+        <a href="" class="btn base">.btn.base</a>
+        <button class="btn lg">.btn.lg</button>
+        <h4>버튼 색상</h4>
+        <a href="" class="btn base white">.btn.white</a>
+        <button class="btn base pink">.btn.pink</button>
+        <h4>버튼 라운드</h4>
+        <a href="" class="btn base white">.btn</a>
+        <a href="" class="btn base white rounded">.btn.rounded</a>
+        <h4>버튼 아이콘</h4>
+        <a href="" class="btn base white ico1">.btn.ico1</a>
+        <a href="" class="btn base white ico2">.btn.ico2</a>
+
+        <h3>분자정의</h3>
+        <div class="btn-group-type1">
+          <button class="btn white base">학습자 선택</button>
+          <button class="btn white base">학습자 업로드</button>
+          <button class="btn white base ico2">파일 업로드</button>
+        </div>
+
+        <h2>팝업 가이드</h2>
+        <h3>원자정의</h3>
+        <button popovertarget="popup" popoveraction="show" class="btn white rounded base">팝업열기</button>
+        <div id="popup" class="popup" popover role="dialog">
+          test
+          <button class="btn-close" aria-label="닫기" popovertarget="popup" popoveraction="hide">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.67925 9.99995L0.000211985 1.32081L1.32104 0L10.0001 8.67914L18.6792 0.000136721L20 1.32096L11.3209 9.99996L20 18.6792L18.6792 20L10.0001 11.3208L1.32081 19.9999L0 18.6791L8.67925 9.99995Z"
+                fill="#999999"
+              />
+            </svg>
+          </button>
+        </div>
+        <!-- 본문 끝 -->
+      </div>
+    </main>
+    <footer class="footer"></footer>
+    <style>
+      .container {
+        h3 ~ h3 {
+          padding: 50px 0 20px;
+        }
+
+        h2 ~ h2 {
+          padding: 100px 0 20px;
+        }
+      }
+      .copy-wrap {
+        position: relative;
+        border: 2px solid silver;
+        padding: 20px;
+        transition: 0.4s;
+        &:has(.active) {
+          border-color: orange;
+        }
+        ~ .copy-wrap {
+          margin-top: 20px;
+        }
+        .btn-copy {
+          position: absolute;
+          inset: 10px 10px auto auto;
+          padding: 5px;
+          transition: 0.4s;
+          &.active {
+            background-color: orangered;
+            color: white;
+          }
+        }
+      }
+      .copy {
+        position: relative;
+        border: 2px solid silver;
+        padding: 20px;
+        transition: 0.4s;
+        &:has(.active) {
+          border-color: orange;
+        }
+        ~ .copy {
+          margin-top: 20px;
+        }
+        .btn-copy {
+          position: absolute;
+          inset: 10px 10px auto auto;
+          padding: 5px;
+          transition: 0.4s;
+          &.active {
+            background-color: orangered;
+            color: white;
+          }
+        }
+      }
+    </style>
+  </body>
+</html>

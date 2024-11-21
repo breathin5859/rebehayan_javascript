@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <script src="10-event.js" defer></script>
+    <link rel="stylesheet" href="./10-event.css" />
+  </head>
+
+  <body>
+    <h2>이벤트 제거</h2>
+    <button class="btn-remove">이벤트 제거</button>
+    <button class="download">다운로드</button>
+    <hr />
+
+    <div class="event">
+      <h2>캡처링(Capturing)</h2>
+      <div class="parent capture">
+        Parent
+        <div class="children">Children</div>
+      </div>
+
+      <h2>버블링(Bubbling)</h2>
+      <div class="parent bubble">
+        Parent
+        <div class="children">Children</div>
+      </div>
+    </div>
+    <hr />
+
+    <h2>Event</h2>
+    <div class="event-list">
+      <form>
+        <fieldset>
+          <legend>마우스 이벤트</legend>
+          <div class="mouse">Mouse</div>
+        </fieldset>
+      </form>
+      <form>
+        <fieldset>
+          <legend>키보드 이벤트</legend>
+          <input type="text" class="keyboard" placeholder="Keyboard" />
+        </fieldset>
+      </form>
+      <form class="form">
+        <fieldset>
+          <legend>폼 이벤트</legend>
+          <input type="text" />
+          <select name="" id="">
+            <option value="data1">data1</option>
+            <option value="data2">data2</option>
+            <option value="data3">data3</option>
+          </select>
+          <button type="submit">확인</button>
+        </fieldset>
+      </form>
+      <form>
+        <fieldset>
+          <legend>문서/윈도우 이벤트</legend>
+          <div class="dom"><a href="#none">페이지변경</a></div>
+        </fieldset>
+      </form>
+    </div>
+    <hr />
+
+    <h2>Target</h2>
+    <div class="parent target">
+      Parent
+      <div class="children">Children</div>
+    </div>
+
+    <hr />
+
+    <h2>Keycode</h2>
+    <form class="key">
+      <fieldset>
+        <legend>단축키</legend>
+        <input type="text" placeholder="keycode" />
+      </fieldset>
+    </form>
+
+    <hr />
+
+    <h2>기본동작 방지</h2>
+    <form class="disabled">
+      <fieldset>
+        <legend>링크 차단</legend>
+        <a href="">이동하기</a>
+      </fieldset>
+      <fieldset>
+        <legend>전송 차단</legend>
+        <input type="text" />
+        <button type="submit">전송</button>
+      </fieldset>
+    </form>
+
+    <h2>Animation End</h2>
+    <div class="parent ani">
+      <div class="children"></div>
+    </div>
+  </body>
+</html>

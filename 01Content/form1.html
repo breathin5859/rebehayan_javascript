@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼1</title>
+  <link rel="stylesheet" href="./css/reset.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <h2>로그인</h2>
+    <p>R.POINT 통합 회원은 리베서비스를 하나의 ID로 이용할 수 있습니다.</p>
+    <form>
+      <fieldset>
+        <legend>로그인</legend>
+        <label for="txt1_1">아이디</label>
+        <input type="email" required id="txt1_1" placeholder="아이디 또는 이메일을 입력해주세요.">
+        <label for="txt1_2">비밀번호</label>
+        <input type="password" required id="txt1_2" placeholder="비밀번호를 입력해주세요.">
+        <button type="submit">로그인</button>
+      </fieldset>
+    </form>
+    <ul>
+      <li>
+        <a href="">아이디찾기</a>
+      </li>
+      <li>
+        <a href="">비밀번호찾기</a>
+      </li>
+      <li>
+        <a href="">가입하기</a>
+      </li>
+    </ul>
+  </div>
+  <style>
+    form {
+      fieldset {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 10px;
+      }
+
+      button {
+        grid-column: 1/-1;
+      }
+    }
+
+    input {
+      anchor-name: --del;
+      border: 1px solid black;
+      padding: 2px 4px;
+      height: 30px;
+    }
+
+    .del {
+      position: fixed;
+      display: none;
+      border: none;
+      background-color: silver;
+      border-radius: 1000px;
+      width: 20px;
+      aspect-ratio: 1;
+    }
+  </style>
+</body>
+
+</html>

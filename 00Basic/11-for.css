@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  list-style: none;
+}
+body {
+  padding: 30px;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.for {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1rem;
+  li {
+    aspect-ratio: 1;
+    background-color: hsl(var(--color), 100%, 85%);
+    text-align: center;
+    align-content: center;
+    font-size: 1.2rem;
+    border-radius: 0.4rem;
+  }
+}
+
+.forof {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1rem;
+  li {
+    aspect-ratio: 1;
+    background-color: hsl(var(--color), 100%, 85%);
+    text-align: center;
+    align-content: center;
+    font-size: 1.2rem;
+    border-radius: 0.4rem;
+  }
+}
+.forof2 {
+  display: flex;
+  li {
+    color: hsl(var(--color), 90%, 40%);
+    font-size: 1.2rem;
+  }
+}
+
+.forin {
+  display: flex;
+  font-size: 1.5rem;
+  li {
+    padding-inline: 1.5rem;
+    + li {
+      background: linear-gradient(to right, silver, silver) no-repeat left / 1px 1rem;
+    }
+  }
+  .name {
+    font-weight: 800;
+  }
+  .age {
+    color: violet;
+  }
+  .role {
+    text-decoration-line: underline;
+    text-decoration-color: tomato;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 2px;
+  }
+}
+
+h2 {
+  ~ h2 {
+    margin-top: 3rem;
+  }
+}

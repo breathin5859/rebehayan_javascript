@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>리스트14</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <script defer src="./js/list14.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="message">
+        <img src="./images/ico_product1.png" alt="" />
+        <h2>제목</h2>
+      </div>
+      <div class="list-type14">
+        <ul>
+          <li>
+            <button>
+              <span><img src="./images/ico_product9.png" alt="" /></span>
+              파격세트
+            </button>
+          </li>
+          <li>
+            <button>
+              <span><img src="./images/ico_product1.png" alt="" /></span>
+              파격세트
+            </button>
+          </li>
+          <li>
+            <button>
+              <span><img src="./images/ico_product2.png" alt="" /></span>
+              치킨·튀김
+            </button>
+          </li>
+          <li>
+            <button>
+              <span><img src="./images/ico_product3.png" alt="" /></span>
+              생수·탄산·주스
+            </button>
+          </li>
+          <li>
+            <button>
+              <span><img src="./images/ico_product4.png" alt="" /></span>
+              면요리·라면
+            </button>
+          </li>
+          <li>
+            <button>
+              <span><img src="./images/ico_product5.png" alt="" /></span>
+              초콜릿·껌
+            </button>
+          </li>
+          <li>
+            <button>
+              <span><img src="./images/ico_product6.png" alt="" /></span>
+              유제품·커피
+            </button>
+          </li>
+          <li>
+            <button>
+              <span><img src="./images/ico_product7.png" alt="" /></span>
+              도시락·김밥
+            </button>
+          </li>
+          <li>
+            <button>
+              <span><img src="./images/ico_product8.png" alt="" /></span>
+              아이스크림·얼음
+            </button>
+          </li>
+          <li>
+            <button>
+              <span><img src="./images/ico_product10.png" alt="" /></span>
+              즉석식품
+            </button>
+          </li>
+          <li>
+            <button>
+              <span><img src="./images/ico_product11.png" alt="" /></span>
+              분식·요리
+            </button>
+          </li>
+          <li>
+            <button>
+              <span><img src="./images/ico_product13.png" alt="" /></span>
+              버거·샌드위치
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <style>
+      :root {
+        --width: 500px;
+      }
+
+      .list-type14 {
+        overflow: auto;
+        width: 100%;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.08);
+
+        ul {
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          gap: 20px 10px;
+        }
+
+        li:first-child {
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        button {
+          background: none;
+          border: none;
+          white-space: nowrap;
+
+          span {
+            display: block;
+            margin: 0 auto 10px;
+            width: 80px;
+            aspect-ratio: 1;
+            border-radius: 1000px;
+            background-color: white;
+            align-content: center;
+            text-align: center;
+            overflow: hidden;
+          }
+        }
+      }
+
+      .message {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        padding: 0 0 10px;
+        gap: 10px;
+
+        img {
+          grid-row: 1/3;
+          width: 100px;
+        }
+      }
+
+      .wrapper {
+        width: var(--width);
+      }
+    </style>
+  </body>
+</html>

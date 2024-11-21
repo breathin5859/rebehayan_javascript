@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 20px;
+}
+:is(hr, form) {
+  margin-block: 40px 1rem;
+}
+h2 {
+  margin-block: 40px 10px;
+}
+a,
+button {
+  border-radius: 1000px;
+  padding: 10px 30px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  background-color: coral;
+  border: 3px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+.event {
+  display: grid;
+  gap: 0 20px;
+  grid-template:
+    "h2-1 h2-2"
+    "parent-1 parent-2";
+
+  h2 {
+    &:nth-of-type(1) {
+      grid-area: h2-1;
+    }
+    &:nth-of-type(2) {
+      grid-area: h2-2;
+    }
+  }
+  .parent {
+    &:nth-of-type(1) {
+      grid-area: parent-1;
+    }
+    &:nth-of-type(2) {
+      grid-area: parent-2;
+    }
+  }
+}
+
+fieldset {
+  border: 2px solid silver;
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+  legend {
+    font-size: 20px;
+    padding-inline: 15px;
+  }
+  :is(input, select) {
+    height: 49px;
+    border: 3px solid coral;
+    border-radius: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 20px;
+    font-size: 20px;
+  }
+}
+
+.parent {
+  background-color: var(--bg, cadetblue);
+  padding: 50px;
+  color: white;
+  font-size: 30px;
+}
+.children {
+  height: 300px;
+  padding: 20px;
+  margin: 10px;
+  color: black;
+  box-sizing: border-box;
+  background-color: var(--bgChildren, cornsilk);
+  align-content: center;
+}
+.event-list {
+  :is(input, select) {
+    height: 49px;
+    border: 3px solid coral;
+    border-radius: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 20px;
+    font-size: 20px;
+  }
+}
+fieldset {
+  border: 2px solid silver;
+  padding: 20px;
+  .form & {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    button {
+      grid-column: 1/-1;
+    }
+  }
+  legend {
+    font-size: 20px;
+    padding-inline: 15px;
+  }
+}
+.keyboard {
+  width: 100%;
+}
+.mouse {
+  background-color: blueviolet;
+  color: white;
+  padding: 1rem;
+}
+.dom {
+  padding: 1rem;
+}
+.ani {
+  .children {
+    width: 10%;
+    animation: var(--ani, ani) 1 2s both cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    background-color: var(--bg, pink);
+    transition: 1s;
+  }
+}
+@keyframes ani {
+  100% {
+    width: 100%;
+  }
+}
+@keyframes size {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+  }
+}
+@keyframes move {
+  0% {
+    width: 100px;
+    height: 100px;
+  }
+  100% {
+    translate: 200px;
+    width: 100px;
+    height: 100px;
+  }
+}

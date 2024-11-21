@@ -1,0 +1,54 @@
+.wrapper {
+  background-color: #323332;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 7px;
+  width: 100%;
+  caption {
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip-path: inset(1px, 1px, 1px, 1px);
+    position: absolute;
+  }
+
+  thead {
+    th {
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+    }
+  }
+  tbody {
+    td {
+      position: relative;
+      width: 130px;
+      height: 130px;
+      color: #666;
+      font-size: 26px;
+      font-weight: 900;
+      text-align: right;
+      padding: 10px 15px;
+      vertical-align: top;
+    }
+  }
+  .today {
+    border: 1px solid #3db283;
+    color: #3db283;
+  }
+  .closed {
+    border: 1px solid #ffd200;
+    color: #ffd200;
+  }
+  .available {
+    border: 1px solid #666;
+    color: #666;
+  }
+  .state {
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    font-size: 16px;
+  }
+}

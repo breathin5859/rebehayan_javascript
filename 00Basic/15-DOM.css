@@ -1,0 +1,36 @@
+body {
+  height: 300vh;
+  background: linear-gradient(to bottom, darksalmon, hotpink, tomato);
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: sticky;
+  inset: 10px 0 auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+button {
+  font-size: 20px;
+  border: 1px solid black;
+  padding: 5px;
+  cursor: pointer;
+  &.active {
+    color: white;
+    background-color: black;
+  }
+}
+.block {
+  position: fixed;
+  width: 20%;
+  aspect-ratio: 1;
+  overflow: auto;
+  font-size: 25px;
+  inset: 0;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  border: 10px solid black;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}

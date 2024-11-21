@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAO-10</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="header white">
+      <h1>수강신청</h1>
+      <div class="header__left"><a href="" class="btn-prev" aria-label="이전으로"></a></div>
+      <div class="header__right"></div>
+    </header>
+    <main>
+      <h2 class="heading base ico mx16 mt24">신청자정보</h2>
+      <hr class="line-type1 mt16 mx16" />
+      <div class="table-type3 mx16 mt12">
+        <div class="--title">이름</div>
+        <div class="--content"><input type="text" class="input" /></div>
+        <div class="--title">이메일</div>
+        <div class="--content"><input type="email" class="input" /></div>
+        <div class="--title">휴대전화</div>
+        <div class="--content">
+          <div class="tel">
+            <select class="select" title="휴대전화 첫번째자리">
+              <option>010</option>
+            </select>
+            <input type="tel" class="input" title="휴대전화 중간자리" />
+            <input type="tel" class="input" title="휴대전화 마지막자리" />
+          </div>
+        </div>
+      </div>
+
+      <h2 class="heading base ico mx16 mt48">교재 배송지 정보</h2>
+      <hr class="line-type1 mt16 mx16" />
+
+      <div class="table-type3 mx16 mt12">
+        <div class="--title top">주소</div>
+        <div class="--content">
+          <div class="radio-group">
+            <div><input type="radio" class="radio-type1" checked name="radio3" id="radio3_1" /><label for="radio3_1">최근배송지</label></div>
+            <div><input type="radio" class="radio-type1" name="radio3" id="radio3_2" /><label for="radio3_2">기본배송지</label></div>
+            <div><input type="radio" class="radio-type1" name="radio3" id="radio3_3" /><label for="radio3_3">신규배송지</label></div>
+          </div>
+          <div class="address">
+            <input type="number" class="input" title="우편번호" readonly="" />
+            <button class="btn base lightgray rounded8">우편번호 찾기</button>
+            <input type="text" class="input" title="기본주소" readonly="" />
+            <input type="text" class="input" placeholder="상세주소를 입력하세요." />
+          </div>
+          <input type="checkbox" class="check-type1" id="check1_1" /><label for="check1_1" class="mt16 text-type3">기본배송지정보에 반영합니다.</label>
+        </div>
+        <div class="--title top">요청사항</div>
+        <div class="--content">
+          <select class="select" title="배송시 요청사항">
+            <option>배송시 요청사항 선택</option>
+          </select>
+          <p class="text-type3 mt8">부재시 연락가능한 번호나 수령장소 등을 적어주세요 (한글 30자 이내)</p>
+          <input type="checkbox" class="check-type1" id="check1_2" /><label for="check1_2" class="mt16 text-type3">개인정보 수집 및 이용에 동의합니다.</label>
+          <p class="text-type3 mt16">(목적 : 교재배송 및 취소교재 회수 / 보유기간 : 회원탈퇴 시까지 / 항목 : 이름, 연락처, 주소)</p>
+          <p class="text-type3 mt12">개인정보 수집 및 이용에 거부하실 수 있으며, 거부하시는 경우 수강신청을 하실 수 없습니다.</p>
+        </div>
+      </div>
+      <div class="fix-bottom">
+        <button class="btn lg blue ico1 fullsize rounded8">수강신청</button>
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="footer__copy">COPYRIGHT ⓒ 2000 <b>Rebehayan</b> ALL RIGHTS RESERVED.</p>
+      <div class="bar-type1">
+        <div><a href="">개인정보처리방침</a></div>
+        <div><b>교육담당</b> : 홍길동 02-1234-5678</div>
+      </div>
+    </footer>
+  </body>
+</html>
