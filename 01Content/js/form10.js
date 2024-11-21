@@ -6,11 +6,15 @@ const textCount = () => {
 
   title.addEventListener("input", () => {
     const titleValue = title.value;
+
+    title.setAttribute("maxlength", "29");
     titleCount.textContent = `${titleValue.length}/30`;
   });
   content.addEventListener("input", () => {
     const contentValue = content.value;
-    contentCount.textContent = `${contentValue.length}/30`;
+
+    content.setAttribute("maxlength", "999");
+    contentCount.textContent = `${contentValue.length}/1000`;
   });
 };
 
