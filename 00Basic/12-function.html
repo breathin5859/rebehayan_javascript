@@ -1,15 +1,63 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수</title>
+    <script src="./12-function.js" defer></script>
+    <link rel="stylesheet" href="./12-function.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>함수</title>
-  <script src="./12-function.js" defer></script>
-</head>
+  <body>
+    <h2>return을 사용해야 하는 경우</h2>
+    <h3>두수의 합을 구하세요</h3>
+    <div class="block">
+      <form class="sum">
+        <input type="number" class="number1" />
+        +
+        <input type="number" class="number2" />
+        <button>결과</button>
+        <p></p>
+      </form>
+    </div>
 
-<body>
+    <h3>메세지를 입력하세요.</h3>
+    <div class="block">
+      <form class="message">
+        <input type="text" />
+        <button>메세지 확인</button>
+        <p></p>
+      </form>
+    </div>
+    <h2>return을 사용하지 않아도 되는 경우</h2>
+    <h3>이름을 작성해주세요.</h3>
+    <div class="block">
+      <form class="event">
+        <input type="text" />
+        <button>이름입력</button>
+      </form>
+    </div>
+    <h3>제목 변경</h3>
+    <div class="block">
+      <h3 class="change-title">제목을 변경시켜 주세요.</h3>
+    </div>
+    <h3>콘솔 출력</h3>
+    <h3>DOM 제어</h3>
+    <div class="block">
+      <ul class="list">
+        <li>클래스를 넣어주세요.</li>
+        <li>클래스를 넣어주세요.</li>
+        <li>클래스를 넣어주세요.</li>
+      </ul>
+    </div>
 
-</body>
+    <h2>호출 스케줄링</h2>
+    <h3>토스트팝업</h3>
+    <button class="stop-toast">토스트팝업 정지</button>
+    <dialog class="toast" open></dialog>
 
+    <h3>타이머</h3>
+    <p id="timer">Timer : 0초</p>
+    <button class="stop-timer">타이머 정지</button>
+  </body>
 </html>

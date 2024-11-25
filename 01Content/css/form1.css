@@ -1,0 +1,97 @@
+body {
+  background-color: #f4efeb;
+}
+:is(button, fieldset) {
+  border: none;
+}
+legend {
+  position: absolute;
+  clip-path: rect(1px 1px 1px 1px);
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+.heading {
+  color: #000;
+  font-size: 33px;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 42px;
+}
+.discription {
+  color: #777;
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+.login {
+  width: 650px;
+  text-align: center;
+  fieldset {
+    display: grid;
+    grid-template-columns: 118px 1fr;
+    align-items: center;
+    gap: 24px 0;
+    label {
+      text-align: left;
+      color: #777;
+      font-size: 16px;
+    }
+    span {
+      position: relative;
+    }
+    input {
+      width: 100%;
+      height: 56px;
+      border: 1px solid #e2e2e2;
+      background: #fff;
+      color: #aaa;
+      font-size: 16px;
+      padding-inline: 20px;
+      &::placeholder {
+        color: inherit;
+      }
+    }
+    button[type="submit"] {
+      grid-column: 1/-1;
+      border-radius: 29px;
+      background: #957963;
+      height: 58px;
+      margin-top: 26px;
+      color: #fff;
+      font-size: 16px;
+    }
+  }
+}
+.login-list {
+  display: flex;
+  justify-content: center;
+  li {
+    display: flex;
+    align-items: center;
+    + li {
+      &::before {
+        content: "";
+        margin-inline: 20px;
+        width: 1px;
+        height: 16px;
+        border-right: 1px solid #dbdbdb;
+      }
+    }
+  }
+  a {
+    color: #777;
+    font-size: 16px;
+  }
+}
+
+.btn-del {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 10;
+  background: url(../images/btn_close.svg) no-repeat center / contain content-box;
+  width: 30px;
+  padding: 5px;
+  aspect-ratio: 1;
+}

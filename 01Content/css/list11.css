@@ -1,11 +1,46 @@
-.submenu {
-  display: grid;
-  grid-template-rows: 1fr;
-  transition: 0.5s;
-  &.hide {
-    grid-template-rows: 0fr;
+.snb {
+  --line: #ddd;
+  --line2: #222;
+  --text: #575757;
+
+  border-top: 2px solid var(--line2);
+  > li {
+    border-bottom: 1px solid var(--line);
+    > button,
+    > a {
+      display: block;
+      padding: 16px;
+      width: 100%;
+      cursor: pointer;
+      border: none;
+      text-align: left;
+      font-size: 15px;
+      color: var(--text);
+    }
+    button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 55px;
+      background-color: transparent;
+      &.active {
+        &::after {
+          transform: rotate(0);
+        }
+      }
+      &::after {
+        content: url(../images/ico_depth.svg);
+        transform: rotate(180deg);
+        transition: 0.5s;
+      }
+    }
   }
-  ul {
-    overflow: hidden;
+  .depth {
+    padding: 1px 16px 17px;
+    a {
+      color: var(--text);
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 }

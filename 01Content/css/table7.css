@@ -1,35 +1,104 @@
+:is(button, fieldset) {
+  border: none;
+}
+:is(legend, caption, .a11y-hidden) {
+  position: absolute;
+  clip-path: rect(1px 1px 1px 1px);
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+fieldset {
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 .table {
-  width: 100%;
-  table-layout: fixed;
-  td,
-  th {
-    border: 1px solid #000;
-    padding: 10px;
-  }
-  tr:nth-child(even) {
-    td,
-    th {
-      border: none;
-      padding: 0;
-    }
+  width: 60vw;
+}
+
+.table-info {
+  margin-bottom: 15px;
+  color: #878787;
+  font-size: 14px;
+  span {
+    font-weight: 700;
+    color: #070707;
   }
 }
-.answer {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.4s;
-  padding: 0;
-  .--active & {
-    grid-template-rows: 1fr;
-    padding-block: 20px;
+
+.table {
+  thead {
+    th {
+      padding: 10px;
+      color: #7d7d7d;
+      font-size: 14px;
+      font-weight: 400;
+      background-color: #f8f8f8;
+      border-top: 1px solid #9ea0a3;
+    }
   }
-  > div {
-    overflow: hidden;
-    padding-inline: 20px;
+  tbody {
+    border-bottom: 1px solid #e1e1e1;
+    tr {
+      border-top: 1px solid #e1e1e1;
+      &.active button,
+      &:has(.active) button {
+        color: #2352a4;
+      }
+    }
+    tr:nth-child(even) {
+      display: none;
+    }
+    td {
+      color: #7d7d7d;
+      font-size: 14px;
+      line-height: 44px;
+      text-align: center;
+      &:has(button) {
+        text-align: left;
+      }
+    }
+  }
+  button {
+    background: none;
+    color: #090909;
+  }
+  .answer {
+    padding: 37px 29px;
+    text-align: left;
+    background-color: #f8f8f8;
+    color: #7d7d7d;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;
   }
 }
 
 .paging {
-  text-align: center;
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  a {
+    width: 28px;
+    aspect-ratio: 1;
+    text-align: center;
+    align-content: center;
+    color: #000;
+    font-family: "Noto Sans KR";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    &.active,
+    &:hover {
+      color: #dd4b39;
+    }
+  }
+  .control {
+    margin-inline: 10px;
+  }
 }

@@ -2,14 +2,37 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px 100px;
-  img {
-    display: block;
-    margin-inline: auto;
-  }
   .title {
     padding-top: 23px;
     font-size: 18px;
     letter-spacing: -0.9px;
+  }
+  .brand {
+    display: block;
+    width: 113px;
+    margin-inline: auto;
+    aspect-ratio: 1;
+    border-radius: 1000px;
+    text-align: center;
+    align-content: center;
+    &.color1 {
+      background-color: #fe370b;
+    }
+    &.color2 {
+      background-color: #ed1c24;
+    }
+    &.color3 {
+      background-color: #243e8c;
+    }
+    &.color4 {
+      background-color: #e30714;
+    }
+    &.color5 {
+      background-color: #000;
+    }
+    &.color6 {
+      background-color: #ed1c24;
+    }
   }
 
   ul {

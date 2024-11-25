@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>폼6</title>
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/form6.css" />
     <script defer src="./js/form6.js"></script>
   </head>
 
   <body>
-    <div class="wrapper">
-      <form class="form6">
+    <div class="wrapper form6">
+      <form>
         <fieldset>
           <legend>주거적용</legend>
           <div class="selected"></div>
-          <table width="100%" border="1">
+          <table class="table-type1">
             <caption>
               주거선택
             </caption>
@@ -51,28 +52,12 @@
               </tr>
             </tbody>
           </table>
-          <button type="submit">선택 적용하기</button>
-          <button type="reset" class="btn-reset">초기화</button>
+          <div class="btn-group">
+            <button type="submit" class="btn-submit">선택 적용하기</button>
+            <button type="reset" class="btn-reset">초기화</button>
+          </div>
         </fieldset>
       </form>
     </div>
-    <style>
-      .selected {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5px;
-
-        span {
-          padding: 2px;
-          font-size: 14px;
-          color: gray;
-
-          &::before {
-            content: "#";
-            color: darkgrey;
-          }
-        }
-      }
-    </style>
   </body>
 </html>

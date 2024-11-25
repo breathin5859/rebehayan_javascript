@@ -21,16 +21,16 @@
   }
   li {
     background: no-repeat right 16px bottom 16px;
-    &:nth-child(1) {
+    &.ico1 {
       background-image: url(../images/ico-content4-1.svg);
     }
-    &:nth-child(2) {
+    &.ico2 {
       background-image: url(../images/ico-content4-2.svg);
     }
-    &:nth-child(3) {
+    &.ico3 {
       background-image: url(../images/ico-content4-3.svg);
     }
-    &:nth-child(4) {
+    &.ico4 {
       background-image: url(../images/ico-content4-4.svg);
     }
   }

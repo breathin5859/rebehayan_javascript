@@ -1,0 +1,62 @@
+:is(button, fieldset) {
+  border: none;
+}
+:is(legend, caption, .a11y-hidden) {
+  position: absolute;
+  clip-path: rect(1px 1px 1px 1px);
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+fieldset {
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.terms {
+  hr {
+    margin-block: 40px;
+    border: none;
+    border-top: 1px solid #f0f0f0;
+  }
+  label {
+    color: #000;
+    font-size: 16px;
+    padding-left: 6px;
+    span {
+      color: #727272;
+      font-size: 15px;
+    }
+  }
+  .terms-area {
+    margin-block: 15px 40px;
+    height: 150px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 2.5vw;
+    overflow: auto;
+    padding: 10px;
+  }
+  [type="reset"] {
+    height: 40px;
+    width: 120px;
+    border-radius: 20px;
+    border: 1px solid #d9d9d9;
+    background: #fff;
+  }
+  [type="submit"] {
+    height: 40px;
+    width: 120px;
+    border-radius: 20px;
+    background: #d9d9d9;
+    color: #fff;
+  }
+}
+
+.btn-group {
+  text-align: center;
+}

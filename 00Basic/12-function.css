@@ -1,0 +1,84 @@
+p {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 5rem;
+}
+.block {
+  display: inline-flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+}
+input {
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 12px;
+  height: 60px;
+  padding: 0 20px;
+  font-size: 20px;
+}
+button {
+  background-color: #9759c4;
+  border: none;
+  border-radius: 100px;
+  height: 60px;
+  min-width: 100px;
+  padding-inline: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+h2 {
+  ~ h2 {
+    padding: 100px 0 0;
+  }
+}
+
+.sum {
+  input {
+    width: 100px;
+  }
+}
+h3:not(.change-title) {
+  ~ h3 {
+    padding: 20px 0 0;
+  }
+  &::before {
+    content: "👉";
+  }
+}
+
+.toast {
+  background-color: #9759c4;
+  color: #fff;
+  border-radius: 100px;
+  opacity: 1;
+  translate: 0;
+  transition: 0.5s allow-discrete;
+  &:not([open]) {
+    translate: 0 60px;
+    opacity: 0;
+  }
+  @starting-style {
+    translate: 0 60px;
+    opacity: 0;
+  }
+}
+
+#timer {
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 200px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}

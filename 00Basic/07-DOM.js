@@ -344,7 +344,8 @@ const siblings = () => {
 
 // siblings();
 
-// 클릭한 부모애 클래스
+// *
+// 클릭한 부모에 클래스
 const toggleDays = () => {
   const buttons = document.querySelectorAll(".routine-list > li > button");
   // 한개
@@ -358,12 +359,112 @@ const toggleDays = () => {
   buttons.forEach((button) => {
     button.addEventListener("click", (e) => {
       const parent = e.currentTarget.parentElement;
-      console.log(parent);
+      const children = e.currentTarget.children;
+
+      // console.log(parent);
       parent.classList.toggle("active");
+
+      // console.log(children);
+      // children[1].style.color = "yellow";
+      if (children[1].hasAttribute("style")) {
+        children[1].removeAttribute("style");
+      } else {
+        children[1].style.color = "yellow";
+        // 스타일은 Css로 하는게 좋음(점수가 높아져 밀림)
+      }
     });
   });
 };
 toggleDays();
+
+// *
+// 조상부모선택자 - 가장 가까운 부모
+// closest 나를 기준을 부모를 탐색
+
+const toggleDepth = () => {
+  const buttons = document.querySelectorAll(".routine-list button");
+  buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      // console.log(e.currentTarget);
+      const depthButton = e.currentTarget;
+      if (depthButton.closest("div")) {
+        depthButton.closest("li").style.border = "5px dashed red";
+      }
+    });
+  });
+};
+toggleDepth();
+
+// *
+// contains -  특정 요소를 포함하고 있는지 확인할때 사용 - hasclass 느낌
+
+const checkDepth = () => {
+  const items = document.querySelectorAll(".routine-list > li");
+
+  items.forEach((item) => {
+    const depth = item.querySelector(".detail-list");
+    console.log(item.contains(depth));
+
+    if (!item.contains(depth)) {
+      const button = item.querySelector("button");
+      button.setAttribute("role", "link"); // role 많이 쓰임
+      button.addEventListener("click", () => {
+        window.location.href = "#page";
+      });
+    }
+  });
+};
+checkDepth();
+
 /* -------------------------------------------------------------------------- */
 /*                                   DOM 삽입                                  */
 /* -------------------------------------------------------------------------- */
+// 내가 원하는 곳애 삽입 시킬 수 있음
+// 형제로 삽입하려면
+
+const insertDOM = () => {
+  const ul = document.querySelector(".routine-list");
+
+  // ul.insertAdjacentElement(위치, HTMl코드)
+  ul.insertAdjacentHTML(
+    "beforebegin", // 요소 앞요소로 생성
+    `
+    <h3>제목입니다</h3>
+    <span>서브텍스트</span>
+    `
+  );
+
+  //
+  ul.insertAdjacentHTML("afterend", `<h3>다음형제로 삽입</h3>`);
+
+  // prepend() - 첫번째 요소삽입
+  // createElement() - 새로운 HTML 생성
+  const li = document.createElement("li"); // 1회용 한번만 만듬/
+  li.textContent = "첫번째자식";
+  li.classList.add("first");
+  ul.prepend(li); // prepend html 지원 안해서 택스트만 들어감. 그러니 돔을 생성해줘야함
+
+  // append() - 마지막 요소 삽입
+  const liLast = document.createElement("li");
+  liLast.textContent = "마지막자식";
+  liLast.classList.add("lase");
+  ul.append(liLast);
+
+  //
+  // ul.remove();
+
+  // innerHTML() - 안에 요소 다 날라가고 새롭개 만듦
+  // ul.innerHTML = "<li>새로 생성된 DOM</li>"; // 한줄
+  ul.innerHTML = `
+    <li>새로 생성된 DOM</li>
+    <li>새로 생성된 DOM</li>
+    <li>새로 생성된 DOM</li>
+  `; // 여러줄
+
+  // ul.innerHTML = '텍스트삽입' // 일방적인 삽입만 가능
+  // textContent 같음
+  // 다른점은 textContent는 값을 전달가능함
+  // const text = div.textContent // textContent는 담을 수 있지만, innerHTML은 일방적 삽입만 가능
+};
+
+insertDOM();

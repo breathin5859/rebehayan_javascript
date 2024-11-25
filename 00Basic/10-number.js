@@ -18,10 +18,10 @@ console.log(typeof parseFloat(number.toFixed(1))); // parseFloat 써도 숫자�
 //
 // toLocalesting - 숫자를 세자리 쉼표로 구분하여 끊어줌
 const money = 123123123;
-console.log(money.toLocaleString()); //  - 금액 나타낼때 사용
+console.log(money.toLocaleString()); // - 금액 나타낼때 사용
 console.log(`${money.toLocaleString()}원`);
 
 //
 // Number.isInteger- 숫자가 정수인지 소수인지 알아볼수 있음
-const number2 = 100000000;
-console.log(Number.isInteger(number2));
+const number2 = 1000;
+console.log(Number.isInteger(number2)); // true, 소수면 false

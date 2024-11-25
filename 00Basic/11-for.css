@@ -20,21 +20,48 @@ a {
 
 .for {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
   gap: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-block: 10px;
   li {
-    aspect-ratio: 1;
-    background-color: hsl(var(--color), 100%, 85%);
-    text-align: center;
-    align-content: center;
     font-size: 1.2rem;
-    border-radius: 0.4rem;
+    text-align: center;
+    &::before {
+      content: "";
+      display: block;
+      aspect-ratio: 1;
+      border-radius: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    &.ico1 {
+      &::before {
+        background: url(./images/ico1.svg) no-repeat center / 30% auto hsl(var(--color, 50), 100%, 85%);
+      }
+    }
+    &.ico2 {
+      &::before {
+        background: url(./images/ico2.svg) no-repeat center / 30% auto hsl(var(--color, 50), 100%, 85%);
+      }
+    }
+    &.ico3 {
+      &::before {
+        background: url(./images/ico3.svg) no-repeat center / 30% auto hsl(var(--color, 50), 100%, 85%);
+      }
+    }
+    &.ico4 {
+      &::before {
+        background: url(./images/ico4.svg) no-repeat center / 30% auto hsl(var(--color, 50), 100%, 85%);
+      }
+    }
   }
 }
 
 .forof {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   gap: 1rem;
   li {
     aspect-ratio: 1;
