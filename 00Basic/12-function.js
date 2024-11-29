@@ -11,15 +11,16 @@ const sum = () => {
   const number2 = document.querySelector(".sum .number2");
 
   const result = () => {
-    // input 자체가 string, type이 number 여도
+    // input 자체가 string - type이 number 여도 string으로 뜸
+    // 그래서 내장함수 넘버로 감싸 숫자로 만듦
     const num1 = Number(number1.value);
     const num2 = Number(number2.value);
     // console.log();
-    return num1 + num2;
+    return num1 + num2; // return 으로 result에 담음
 
     // resultValue.textContent = num1 + num2;
-    // 결과를 안에서 할경우는 괜찮음 담겨있으니
-    // 허나 밖에서 결과를 받을땐 return 필요
+    // 결과를 안에서 할경우는 괜찮음 
+    // 허나 밖에서 결과를 받을땐 return 필요 // return을 안하면 순차적으로 실행했고 끝남.
   };
 
   // 버튼을 클릭하면 함수가 실행
@@ -27,8 +28,9 @@ const sum = () => {
     e.preventDefault();
     const sum = result(); // 위의 sum이랑 이름이 같아도. 클릭 안에서만 하는거라 괜찮음.
     // 함수안의 결과를 함수밖으로 빼려면 return으로 빼고 받을때 변수로 받아야함.
+    // 변수로 받는 이유는 데이터는 변수로 저장해야 데이터 관리 측면에서 유리함
 
-    resultValue.textContent = sum;
+    resultValue.textContent = sum; // 버튼 클릭 안에 sum 담겨 보여짐
   });
 };
 sum();
@@ -46,7 +48,7 @@ const message = () => {
     if (input.value === "") {
       console.log("첫번째 실행");
       output.textContent = "메세지 입력하라우";
-      return; // 통과될때까지 계속실행
+      return; // 통과될때까지 계속실행(조건에 만족하기 때문에 조건문이 계속 실행)
     }
     console.log("두번째 실행");
     output.textContent = input.value;
@@ -55,7 +57,7 @@ const message = () => {
 message();
 
 /* ------------------------- return을 사용하지 않아도 되는 경우 ------------------------- */
-// 이벤트 헨들러 함수를 사용할 때
+// 이벤트 핸들러 함수를 사용할 때
 const myName = () => {
   const button = document.querySelector(".event button");
   const input = document.querySelector(".event input");

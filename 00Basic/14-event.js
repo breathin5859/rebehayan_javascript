@@ -85,7 +85,7 @@ mouse.addEventListener("contextmenu", () => logMessage("마우스 우측버튼")
 mouse.addEventListener("wheel", () => logMessage("마우스 휠"));
 
 // 키보드
-keyboard.addEventListener("keydown", () => logMessage("키 누름")); // 누르자마자 실행되기때문에, 누르고 때고 실행해야하지... keyup 추천
+keyboard.addEventListener("keydown", () => logMessage("키 누름")); // 누르자마자 실행되기때문에, 누르고 땔때 이벤트 실행해야하지... keyup 추천
 keyboard.addEventListener("keyup", () => logMessage("키 땜"));
 keyboard.addEventListener("focus", () => logMessage("초점 발생"));
 keyboard.addEventListener("blur", () => logMessage("초점 잃음"));
@@ -124,6 +124,7 @@ key.addEventListener("keydown", (event) => {
 /* -------------------------------------------------------------------------- */
 /*                                animationend                                */
 /* -------------------------------------------------------------------------- */
+// 애니메이션이 있는경우 애니메이션 끝난후 함수 실행
 //  거의 안쓰고 gsap 씀
 const ani = document.querySelector(".ani");
 

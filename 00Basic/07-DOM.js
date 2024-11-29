@@ -345,9 +345,10 @@ const siblings = () => {
 // siblings();
 
 // *
-// 클릭한 부모에 클래스
+// 부모요소 탐색
 const toggleDays = () => {
   const buttons = document.querySelectorAll(".routine-list > li > button");
+  // 클릭한 부모에 클래스
   // 한개
   // button.addEventListener("click", () => {
   //   const parent = button.parentElement;
@@ -388,6 +389,7 @@ const toggleDepth = () => {
       // console.log(e.currentTarget);
       const depthButton = e.currentTarget;
       if (depthButton.closest("div")) {
+        // 가까운 부모에 div 있으면~
         depthButton.closest("li").style.border = "5px dashed red";
       }
     });
@@ -403,9 +405,10 @@ const checkDepth = () => {
 
   items.forEach((item) => {
     const depth = item.querySelector(".detail-list");
-    console.log(item.contains(depth));
+    console.log(item.contains(depth)); // item(.routine-list > li)에 depth 있는지 확인(2개있어 2 true뜸)
 
     if (!item.contains(depth)) {
+      // depth없으면 페이지 이동
       const button = item.querySelector("button");
       button.setAttribute("role", "link"); // role 많이 쓰임
       button.addEventListener("click", () => {
@@ -442,7 +445,7 @@ const insertDOM = () => {
   const li = document.createElement("li"); // 1회용 한번만 만듬/
   li.textContent = "첫번째자식";
   li.classList.add("first");
-  ul.prepend(li); // prepend html 지원 안해서 택스트만 들어감. 그러니 돔을 생성해줘야함
+  ul.prepend(li); // prepend는 html 요소를 지원 안해서 택스트만 들어감. 그러니 돔을 생성해줘야함
 
   // append() - 마지막 요소 삽입
   const liLast = document.createElement("li");
@@ -464,7 +467,8 @@ const insertDOM = () => {
   // ul.innerHTML = '텍스트삽입' // 일방적인 삽입만 가능
   // textContent 같음
   // 다른점은 textContent는 값을 전달가능함
-  // const text = div.textContent // textContent는 담을 수 있지만, innerHTML은 일방적 삽입만 가능
+  // const text = div.textContent 
+  // textContent는 담을 수 있지만, innerHTML은 일방적 삽입만 가능
 };
 
 insertDOM();
