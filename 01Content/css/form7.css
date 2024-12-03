@@ -1,0 +1,31 @@
+.select {
+  position: relative;
+  display: inline-block;
+  &.active {
+    > button {
+      &::after {
+        rotate: 180deg;
+        transition: 0.5s;
+      }
+    }
+    > ul {
+      display: block;
+    }
+  }
+  > button {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "⬇️";
+    }
+  }
+  > ul {
+    display: none;
+    position: absolute;
+    inset: auto 0;
+    button {
+      width: 100%;
+    }
+  }
+}

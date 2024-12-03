@@ -11,6 +11,7 @@
 body {
   background-color: white;
   padding: 0;
+  display: block;
 }
 a {
   text-decoration: none;
@@ -201,13 +202,7 @@ button {
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 100;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1) calc(var(--headerHeight) - 1px),
-    rgba(255, 255, 255, 0.5) calc(var(--headerHeight) - 1px),
-    rgba(255, 255, 255, 0.5) var(--headerHeight),
-    var(--white) var(--headerHeight)
-  );
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) calc(var(--headerHeight) - 1px), rgba(255, 255, 255, 0.5) calc(var(--headerHeight) - 1px), rgba(255, 255, 255, 0.5) var(--headerHeight), var(--white) var(--headerHeight));
   height: var(--headerHeight);
   transition: 0.5s;
   animation: header 1s both;
@@ -218,13 +213,7 @@ button {
 }
 @keyframes header {
   100% {
-    background: linear-gradient(
-      to bottom,
-      rgb(0, 0, 0) calc(var(--headerHeight) - 1px),
-      rgba(255, 255, 255, 0.1) calc(var(--headerHeight) - 1px),
-      rgba(255, 255, 255, 0.1) var(--headerHeight),
-      var(--white) var(--headerHeight)
-    );
+    background: linear-gradient(to bottom, rgb(0, 0, 0) calc(var(--headerHeight) - 1px), rgba(255, 255, 255, 0.1) calc(var(--headerHeight) - 1px), rgba(255, 255, 255, 0.1) var(--headerHeight), var(--white) var(--headerHeight));
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   }
 }

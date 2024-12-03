@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>폼7</title>
     <link rel="stylesheet" href="./css/reset.css" />
-    <script defer src="./js/form7.js"></script>
+    <link rel="stylesheet" href="./css/form7.css" />
+    <!-- <script defer src="./js/form7.js"></script>  -->
+    <script type="module" src="./js/global.js"></script>
   </head>
 
   <body>
@@ -50,10 +52,38 @@
               <tr>
                 <th>휴대전화 *</th>
                 <td>
-                  <select title="휴대전화 첫번째 자리">
+                  <!-- <select title="휴대전화 첫번째 자리">
                     <option value="">선택</option>
                     <option value="">010</option>
-                  </select>
+                  </select> -->
+                  <!-- 커스텀 셀렉트 박스 -->
+                  <div class="select">
+                    <button>선택하세요</button>
+                    <ul>
+                      <li><button>선택1</button></li>
+                      <li><button>선택2</button></li>
+                      <li><button>선택3</button></li>
+                      <li><button>선택4</button></li>
+                    </ul>
+                  </div>
+                  -
+                  <input type="tel" title="휴대전화 두번째 자리" />
+                  -
+                  <input type="tel" title="휴대전화 세번째 자리" />
+                </td>
+              </tr>
+              <tr>
+                <th>일반전화 *</th>
+                <td>
+                  <div class="select">
+                    <button>선택하세요</button>
+                    <ul>
+                      <li><button>선택1</button></li>
+                      <li><button>선택2</button></li>
+                      <li><button>선택3</button></li>
+                      <li><button>선택4</button></li>
+                    </ul>
+                  </div>
                   -
                   <input type="tel" title="휴대전화 두번째 자리" />
                   -

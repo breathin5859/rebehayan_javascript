@@ -5,19 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>표4</title>
     <link rel="stylesheet" href="./css/reset.css" />
-    <script defer src="./js/popup.js"></script>
+    <!-- <script defer src="./js/popup.js"></script> 과제 -->
+    <script type="module" src="./js/global.js"></script>
   </head>
 
   <body>
-    <button class="btn-open">팝업열기</button>
-    <dialog class="popup">
-      팝업내용1
-      <button class="btn-close">팝업닫기</button>
-    </dialog>
-    <button class="btn-open" data-dialog-open="popup">팝업열기</button>
+    <!-- data 이름을 각각 다르게 하는 이유는 목적이 다르니 다르게 제어하려고 -->
+    <!-- 팝업별 세트 -->
+    <button class="btn-open" data-dialog-open="popup1">팝업열기</button>
     <dialog class="popup" data-dialog="popup">
+      팝업내용1
+      <button class="btn-close" data-dialog-close="popup1">팝업닫기</button>
+    </dialog>
+    <!--  dialong popup2 값이 같은걸 찾을 거기 때문에 중간에 여러 요소 있어도 상관없음 -->
+    <button class="btn-open" data-dialog-open="popup2">팝업열기</button>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <dialog class="popup" data-dialog="popup2">
       팝업내용2
-      <button class="btn-close" data-dialog-close="popup">팝업닫기</button>
+      <button class="btn-close" data-dialog-close="popup2">팝업닫기</button>
     </dialog>
     <style>
       dialog {
