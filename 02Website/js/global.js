@@ -1,7 +1,7 @@
 import { includeHTML } from "./ui/includeHTML.js";
 import { footerYear } from "./ui/footerYear.js";
 import { alramBind } from "./ui/alramBind.js";
-import { alramData } from "../data/alram.js";
+import { alramData } from "../data/alramData.js";
 import { closestDel } from "./ui/closestDel.js";
 
 // include
