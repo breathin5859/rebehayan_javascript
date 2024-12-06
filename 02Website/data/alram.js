@@ -1,4 +1,4 @@
-export const alram = [
+export const alramData = [
   {
     id: 1,
     date: "2021. 01. 28",

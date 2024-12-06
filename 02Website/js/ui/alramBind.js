@@ -1,8 +1,13 @@
 import { el } from "../helper.js";
 
 export const alramBind = (arry) => {
-  // 1. map이옹해 html 넣어보기
-  // 2. 구조분해할당해보기
+  // 유효성검사
+  const element = document.querySelector("#alram");
+  const alramCount = document.querySelector(".profile__alram");
+
+  if (!element) {
+    return;
+  }
 
   const alramItems = arry.map((item) => {
     // 구조분해할당
@@ -21,6 +26,6 @@ export const alramBind = (arry) => {
     `;
   });
 
-  console.log(arry.length);
   el(".alram ul").innerHTML = alramItems.join("");
+  el(".profile__alram").textContent = arry.length;
 };

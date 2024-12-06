@@ -1,14 +1,16 @@
 import { includeHTML } from "./ui/includeHTML.js";
 import { footerYear } from "./ui/footerYear.js";
 import { alramBind } from "./ui/alramBind.js";
-import { alram } from "../data/alram.js";
+import { alramData } from "../data/alram.js";
+import { closestDel } from "./ui/closestDel.js";
 
 // include
-includeHTML("rebehayan_javascript/02Website/include/header.html", ".header").then(() => {
+includeHTML("/02Website/include/header.html", ".header").then(() => {
   // 데이터바인딩
-  alramBind(alram);
+  alramBind(alramData);
+  closestDel(".alram__del", "li");
 });
-includeHTML("rebehayan_javascript/02Website/include/footer.html", ".footer").then(() => {
+includeHTML("/02Website/include/footer.html", ".footer").then(() => {
   // footer
   footerYear();
 });
