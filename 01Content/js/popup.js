@@ -1,4 +1,4 @@
-// 팝업
+// 팝업 - 내가 과제한거
 const dialog = () => {
   const btnOpens = document.querySelectorAll(".btn-open");
   const btnCloses = document.querySelectorAll(".btn-close");

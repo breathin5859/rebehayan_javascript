@@ -10,7 +10,6 @@ export const data = [
   },
   {
     id: 2,
-
     logo: "./images/logo-white.svg",
     title: "리베마트온라인 몰/오프라인 매장",
     // date: "2019.3.1(금)-3.31(일)",

@@ -5,7 +5,6 @@
 // };
 
 export const el = (selector) => {
-
   //  문자형 검사(문자열과 빈값)
   // 셀렉터가 없거나 셀렉터 타입이 스트링(문자)가 아닐경우
   if (!selector || typeof selector !== "string") {

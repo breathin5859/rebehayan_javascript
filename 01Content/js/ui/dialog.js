@@ -6,24 +6,24 @@ import { el, els } from "../helper.js";
 // *
 //  1.팝업 한개 열기
 // export const dialog = () => {
-// 다이얼로그 열기
-// const dialog = "dialog"; // 반복되는 선택자 변수 정의 이유는?? -
-// el("button ").addEventListener("click", () => {
-//   el(dialog).show();
-// });
-// el(".btn-close").addEventListener("click", () => {
-//   el(dialog).close();
-// });
-// 다이얼로그 열기 - data-(데이터속성) []속성선택자 안에 써서 하나열기
-// const dialog = "[data-dialog='popup1']";
-// const open = "[data-dialog-open='popup1']";
-// const close = "[data-dialog-close='popup1']";
-// el(open).addEventListener("click", () => {
-//   el(dialog).show();
-// });
-// el(close).addEventListener("click", () => {
-//   el(dialog).close();
-// });
+//   // 다이얼로그 열기
+//   const dialog = "dialog"; // 반복되는 선택자 변수 정의 이유는?? -
+//   el("button ").addEventListener("click", () => {
+//     el(dialog).show();
+//   });
+//   el(".btn-close").addEventListener("click", () => {
+//     el(dialog).close();
+//   });
+//   // 다이얼로그 열기 - data-(데이터속성) []속성선택자 안에 써서 하나열기
+//   const dialog = "[data-dialog='popup1']";
+//   const open = "[data-dialog-open='popup1']";
+//   const close = "[data-dialog-close='popup1']";
+//   el(open).addEventListener("click", () => {
+//     el(dialog).show();
+//   });
+//   el(close).addEventListener("click", () => {
+//     el(dialog).close();
+//   });
 // };
 
 // 2.여러개 팝업 열기

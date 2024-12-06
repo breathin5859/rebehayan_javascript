@@ -6,6 +6,7 @@ export const list7Bind = (arry) => {
   if (!element) {
     return;
   }
+
   // *
   // map() - forEach 처럼 하나의 객체 각각을 가져와 함수안에서 처리 후 새로운 배열 만듦
   const liItems = arry.map((item) => {
@@ -45,6 +46,7 @@ export const list7Bind = (arry) => {
         </li>
     `; // 리턴을 시켜. 결과를 밖으로 내보냄
   });
+
   // console.log(liItems);
   // el(".shop-list").innerHTML = liItems; // 이상하게 나옴. 배열은 ,(쉼표)로 구분하기 때문에.
   el(".shop-list").innerHTML = liItems.join("");

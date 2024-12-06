@@ -1,5 +1,5 @@
 // 헬퍼 파일 만들고 사용하는 법
-// import { el, els } from "./helper.js";
+// import { el, els } from "./helper.js"; // 사용할 페이지에 import
 
 // // el();
 // // el('button');
@@ -31,8 +31,7 @@ includeHTML("/01Content/include/header.html", ".header");
 includeHTML("/01Content/include/footer.html", ".footer");
 
 // 영화검색
-// movieSearch(); // 유효성 검사 넣어보기
+movieSearch(); // 유효성 검사 넣어보기
 
 // select
-select();
 select();

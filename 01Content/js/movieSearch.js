@@ -10,6 +10,12 @@ const searchResult = (keyword) => {
 
 // 돔전용
 export const movieSearch = () => {
+  // 유효성검사 넣어보기(내가)
+  const element = document.querySelector(".movie-list");
+  if (!element) {
+    return;
+  }
+
   // 2. 영화검색(클릭했을때)
   document.querySelector(".container button").addEventListener("click", () => {
     const keyword = document.querySelector(".container input").value;
@@ -28,11 +34,11 @@ export const movieSearch = () => {
         
       `;
       });
-      
+
       console.log(movieItem);
       document.querySelector(".movie-list").innerHTML = movieItem.join("");
     });
   });
 };
 
-// 리턴은 함수 결과갑을 내보냄
+// 리턴은 함수 결과값을 내보냄

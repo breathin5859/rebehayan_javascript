@@ -1,8 +1,13 @@
 import { includeHTML } from "./ui/includeHTML.js";
 import { footerYear } from "./ui/footerYear.js";
+import { alramBind } from "./ui/alramBind.js";
+import { alram } from "../data/alram.js";
 
 // include
-includeHTML("/02Website/include/header.html", ".header");
+includeHTML("/02Website/include/header.html", ".header").then(() => {
+  // 데이터바인딩
+  alramBind(alram);
+});
 includeHTML("/02Website/include/footer.html", ".footer").then(() => {
   // footer
   footerYear();
