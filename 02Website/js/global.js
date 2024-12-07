@@ -6,14 +6,22 @@ import { closestDel } from "./ui/closestDel.js";
 import { learningLounge } from "./ui/learningLounge.js";
 import { learningLoungeData } from "../data/learningdata.js";
 
+//
+import { headerAnimation } from "./gsap.js";
+
 // include
-includeHTML("/rebehayan_javascript/02Website/include/header.html", ".header").then(() => {
+// includeHTML("/rebehayan_javascript/02Website/include/header.html", ".header").then(() => {깃 경로
+includeHTML("/02Website/include/header.html", ".header").then(() => {
   // 데이터바인딩
   alramBind(alramData);
   closestDel(".alram__del", "li");
+
+  // gsap
+  headerAnimation();
 });
-includeHTML("/rebehayan_javascript/02Website/include/footer.html", ".footer").then(() => {
+// includeHTML("/rebehayan_javascript/02Website/include/footer.html", ".footer").then(() => { 깃경로
+includeHTML("/02Website/include/footer.html", ".footer").then(() => {
   // footer
   footerYear();
 });
-learningLounge(learningLoungeData);
+// learningLounge(learningLoungeData);

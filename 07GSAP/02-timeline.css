@@ -1,0 +1,33 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 60vw;
+  margin-inline: auto;
+  > * {
+    height: 100px;
+    text-align: center;
+    align-content: center;
+    color: #fff;
+    font-size: 2rem;
+  }
+}
+
+.header {
+  background-color: orchid;
+  grid-column: 1/-1;
+  height: 200px;
+}
+.visual {
+  background-color: sandybrown;
+  grid-column: 1/-1;
+  height: 120px;
+}
+.footer {
+  background-color: cornflowerblue;
+  grid-column: 1/-1;
+  height: 120px;
+}
+.box {
+  background-color: tomato;
+}

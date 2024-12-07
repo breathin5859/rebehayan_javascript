@@ -1,0 +1,29 @@
+section {
+  position: relative;
+  height: 100vh;
+  background-color: hsl(var(--color), 60%, 80%);
+  font-size: 50px;
+  strong {
+    position: absolute;
+    inset: 20px 20px auto auto;
+  }
+}
+
+.box {
+  width: 150px;
+  aspect-ratio: 1;
+  background-color: #000;
+}
+
+.block {
+  width: 150px;
+  aspect-ratio: 1;
+  border: 2px solid red;
+  background-color: white;
+  margin-block: 100px;
+}
+
+.fix {
+  font-size: 100px;
+  padding-block: 20vw;
+}

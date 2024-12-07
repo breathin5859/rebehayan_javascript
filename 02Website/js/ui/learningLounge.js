@@ -2,16 +2,10 @@ import { el } from "../helper.js";
 
 export const learningLounge = (arry) => {
   const listItems = arry.map((item) => {
-    const {
-      id,
-      thumbnail,
-      badges: { color, coin },
-      title,
-      hastag: { tag1, tag2 },
-      state,
-      date,
-      period,
-    } = arry;
+    const { id, thumbnail, badges, title, hastag, state, date, period } = arry;
+    const { color, coin } = badges;
+    const { tag1, tag2 } = hastag;
+
     return /* html */ `
        <li>
             <a href="">

@@ -10,10 +10,148 @@
       .swiper {
         height: 50vh;
       }
+      .slide3 .swiper-pagination {
+        top: inherit;
+        bottom: 0;
+      }
+      /* 프로그래스 원형 */
+      .autoplay-progress {
+        width: 100px;
+        svg {
+          --progress: 0;
+          stroke-width: 4px;
+          stroke: var(--swiper-theme-color);
+          fill: none;
+          /* autoplayTimeLeft, c 받아오면 1에서부터 줄어들어서 이 수식 필요.  (1 - var(--progress)) 이 수식을 넣어 빼줌,  */
+          stroke-dashoffset: calc(125.6px * var(--progress));
+          /* dashoffset 꽉차있는 상태에서 빠지는  */
+          /* dashed 선의 배열, 선의 갯수*/
+          stroke-dasharray: 125.6;
+          transform: rotate(-90deg);
+        }
+      }
+      /* 프로그래스 바 */
+      .bar-progress {
+        --progress: 0;
+        background-color: silver;
+        &::before {
+          content: "";
+          display: block;
+          width: var(--progress, 0);
+          height: 10px;
+          background-color: blueviolet;
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="swiper">
+    <h2>슬라이드4</h2>
+    <div class="swiper slide4">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+      </div>
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <style>
+      /* 슬라이드4 */
+      .slide4 .swiper-pagination {
+        display: flex;
+        justify-content: center;
+
+        span {
+          --progress: 0;
+          display: flex;
+          width: 100px;
+          border-radius: 0;
+          background-color: silver;
+          opacity: 1;
+          height: auto;
+
+          &.swiper-pagination-bullet-active {
+            background-color: silver;
+          }
+
+          &::before {
+            content: "";
+            width: calc(var(--progress, 0) * 1%);
+            height: 8px;
+            background-color: #000;
+          }
+        }
+      }
+    </style>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h2>슬라이드3</h2>
+
+    <div class="swiper slide3">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+      </div>
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <h3>프로그래스-원형</h3>
+    <!--  프로그래스 -->
+    <div class="autoplay-progress">
+      <svg viewBox="0 0 48 48">
+        <!--  cx="24" cy="24" 박스 안에서 가운데 정렬, r 반지름값  -->
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <span></span>
+    </div>
+    <h3>프로그래스-바</h3>
+    <div class="bar-progress"></div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h2>슬라이드2</h2>
+    <div class="swiper slide2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+      </div>
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h2>슬라이드2</h2>
+    <div class="swiper slide1">
       <div class="swiper-wrapper">
         <div class="swiper-slide">Slide 1</div>
         <div class="swiper-slide">Slide 2</div>
