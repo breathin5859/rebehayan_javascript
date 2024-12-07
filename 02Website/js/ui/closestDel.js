@@ -2,7 +2,6 @@ export const closestDel = (selector, target) => {
   const delBnts = document.querySelectorAll(selector);
 
   delBnts.forEach((delBnt) => {
-    console.log(delBnt);
     delBnt.addEventListener("click", (e) => {
       const del = e.target;
       if (del.closest(target)) {

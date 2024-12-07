@@ -1,11 +1,12 @@
 import { el } from "../helper.js";
 
 export const alramBind = (arry) => {
+
   // 유효성검사
   const element = document.querySelector("#alram");
   const alramCount = document.querySelector(".profile__alram");
 
-  if (!element) {
+  if (!element || !alramCount) {
     return;
   }
 
