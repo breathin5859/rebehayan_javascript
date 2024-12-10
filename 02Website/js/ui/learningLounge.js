@@ -2,9 +2,9 @@ import { el } from "../helper.js";
 
 export const learningLounge = (arry) => {
   const listItems = arry.map((item) => {
-    const { id, thumbnail, badges, title, hastag, state, date, period } = arry;
+    const { id, thumbnail, badges, title, hastag, state, date, period } = item;
     const { color, coin } = badges;
-    const { tag1, tag2 } = hastag;
+    // const { tag1, tag2 } = hastag;
 
     return /* html */ `
        <li>
@@ -13,13 +13,11 @@ export const learningLounge = (arry) => {
                 <img src="${thumbnail}" alt="" />
               </div>
               <div class="badges">
-                <span class="badge ${color}">경영</span>
-                <span class="badge ${coin}">100</span>
+                <span class="badge ">100</span>
               </div>
               <strong class="list-type1__title">${title}</strong>
               <div class="hash">
-                <span>${tag1}</span>
-                <span>${tag2}</span>
+                <span></span>
               </div>
               <ul class="list-type2">
                 <li>

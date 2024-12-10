@@ -3,8 +3,12 @@ import { footerYear } from "./ui/footerYear.js";
 import { alramBind } from "./ui/alramBind.js";
 import { alramData } from "../data/alramData.js";
 import { closestDel } from "./ui/closestDel.js";
-import { learningLounge } from "./ui/learningLounge.js";
-import { learningLoungeData } from "../data/learningdata.js";
+// import { learningLounge } from "./ui/learningLounge.js";
+// import { learningLoungeData } from "../data/learningdata.js";
+import { visualdata } from "../data/visualdata.js";
+import { visualBind } from "./ui/visualBind.js";
+import { visualSwiper } from "./ui/visualSwiper.js";
+import { fileInfo } from "./ui/fileInfo.js";
 
 //
 import { headerAnimation } from "./gsap.js";
@@ -23,5 +27,9 @@ includeHTML("/02Website/include/header.html", ".header").then(() => {
 includeHTML("/02Website/include/footer.html", ".footer").then(() => {
   // footer
   footerYear();
+  visualBind(visualdata);
+  visualSwiper();
+  fileInfo();
+
+  // learningLounge(learningLoungeData);
 });
-// learningLounge(learningLoungeData);
