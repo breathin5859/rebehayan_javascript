@@ -10,38 +10,6 @@
       .swiper {
         height: 50vh;
       }
-      .slide3 .swiper-pagination {
-        top: inherit;
-        bottom: 0;
-      }
-      /* 프로그래스 원형 */
-      .autoplay-progress {
-        width: 100px;
-        svg {
-          --progress: 0;
-          stroke-width: 4px;
-          stroke: var(--swiper-theme-color);
-          fill: none;
-          /* autoplayTimeLeft, c 받아오면 1에서부터 줄어들어서 이 수식 필요.  (1 - var(--progress)) 이 수식을 넣어 빼줌,  */
-          stroke-dashoffset: calc(125.6px * var(--progress));
-          /* dashoffset 꽉차있는 상태에서 빠지는  */
-          /* dashed 선의 배열, 선의 갯수*/
-          stroke-dasharray: 125.6;
-          transform: rotate(-90deg);
-        }
-      }
-      /* 프로그래스 바 */
-      .bar-progress {
-        --progress: 0;
-        background-color: silver;
-        &::before {
-          content: "";
-          display: block;
-          width: var(--progress, 0);
-          height: 10px;
-          background-color: blueviolet;
-        }
-      }
     </style>
   </head>
   <body>
@@ -122,6 +90,61 @@
     </div>
     <h3>프로그래스-바</h3>
     <div class="bar-progress"></div>
+
+    <style>
+      /* ppagination 위치(하단) */
+      .slide3 .swiper-pagination {
+        top: inherit;
+        bottom: 0;
+      }
+      /* 프로그래스 1.원형 */
+      .autoplay-progress {
+        width: 100px;
+        position: relative;
+        aspect-ratio: 1;
+        &::after {
+          content: "";
+          z-index: -1;
+          position: absolute;
+          inset: 50% auto auto 50%;
+          translate: -50% -50%;
+          width: calc(100% - 24px);
+          aspect-ratio: 1;
+          border-radius: 100%;
+          border: 8px solid rgba(0, 0, 0, 0.06);
+        }
+        svg {
+          position: absolute;
+          inset: 0;
+          --progress: 1;
+          stroke-width: 4px;
+          stroke: rgba(0, 0, 0, 0.5);
+          fill: none;
+          /* autoplayTimeLeft, c 받아오면 1에서부터 줄어들어서 이 수식 필요.  (1 - var(--progress)) 이 수식을 넣어 빼줌,  */
+          stroke-dashoffset: calc(125.6px * var(--progress));
+          /* dashoffset 꽉차있는 상태에서 빠지는  */
+          /* dashed 선의 배열, 선의 갯수*/
+          stroke-dasharray: 125.6;
+          transform: rotate(-90deg);
+        }
+        span {
+          position: absolute;
+        }
+      }
+
+      /* 프로그래스 2.바 */
+      .bar-progress {
+        --progress: 0;
+        background-color: silver;
+        &::before {
+          content: "";
+          display: block;
+          width: var(--progress, 0);
+          height: 10px;
+          background-color: blueviolet;
+        }
+      }
+    </style>
     <br />
     <br />
     <br />

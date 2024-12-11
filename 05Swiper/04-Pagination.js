@@ -30,7 +30,7 @@ const swiper4 = new Swiper(".slide4", {
 
 // slide3
 // Pagination Progressbar
-// 자동새쟁시간
+// 자동재생시간
 const svg = document.querySelector(".autoplay-progress svg");
 const isTime = document.querySelector(".autoplay-progress span");
 const isbar = document.querySelector(".bar-progress");
@@ -46,7 +46,8 @@ const swiper3 = new Swiper(".slide3", {
   pagination: {
     el: ".slide3 .swiper-pagination",
     type: "progressbar",
-    // progressbarOpposite: true, // 프로그래스바 vertical, 디렉션 버티컬 주면 안줘도 자동으로 들어감
+    // progressbarOpposite: true, // 프로그레스바 vertical 됨
+    // 프로그래스바 vertical, 디렉션 버티컬 주면 안줘도 자동으로 들어감
   },
 
   // 프로그래스 자동재생
