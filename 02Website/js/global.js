@@ -10,8 +10,13 @@ import { visualBind } from "./ui/visualBind.js";
 import { visualSwiper } from "./ui/visualSwiper.js";
 import { fileInfo } from "./ui/fileInfo.js";
 
-//
+// 탭메뉴
+import { tab } from "./ui/tab.js";
+// 댓글
+import { comment } from "./comment.js";
+// gsap
 import { headerAnimation } from "./gsap.js";
+import { loading } from "./loading.js";
 
 // include
 // includeHTML("/rebehayan_javascript/02Website/include/header.html", ".header").then(() => {깃 경로
@@ -31,5 +36,12 @@ includeHTML("/02Website/include/footer.html", ".footer").then(() => {
   visualSwiper();
   fileInfo();
 
+  loading();
+
   // learningLounge(learningLoungeData);
 });
+
+tab("id", {
+  activeClass: "--active",
+});
+comment();

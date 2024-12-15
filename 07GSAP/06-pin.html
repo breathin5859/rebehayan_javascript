@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Pin</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script defer src="./06-pin.js"></script>
+    <link rel="stylesheet" href="./06-pin.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scroll Pin</title>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script defer src="./06-pin.js"></script>
-  <link rel="stylesheet" href="./06-pin.css">
-</head>
-
-<body>
-  <section class="section1" style="--color:10;">
-    <strong>1</strong>
-  </section>
-  <div class="box">Box Element</div>
-  <section class="section2" style="--color:50;">
-    <strong>2</strong>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi obcaecati corporis mollitia iste doloremque
-    numquam rerum ut, sequi autem eius ipsum a exercitationem earum voluptas voluptates neque ad, at dicta.
-  </section>
-  <div class="block"></div>
-  <section class="section section3" style="--color:90;">
-    <strong class="fix">Fix Text</strong>
-  </section>
-  <section class="section4" style="--color:150;">
-    <strong>Rebehayan</strong>
-  </section>
-  <section class="section5" style="--color:200;">
-    <strong>5</strong>
-  </section>
-</body>
-
+  <body>
+    <section class="section1" style="--color: 10">
+      <strong>1</strong>
+    </section>
+    <div class="box">Box Element</div>
+    <section class="section2" style="--color: 50">
+      <strong>2</strong>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi obcaecati corporis mollitia iste doloremque numquam rerum ut, sequi autem eius ipsum a exercitationem earum voluptas voluptates neque ad, at dicta.
+    </section>
+    <div class="block"></div>
+    <section class="section section3" style="--color: 90; overflow: hidden">
+      <strong class="fix">Fix Text</strong>
+    </section>
+    <section class="section4" style="--color: 150">
+      <strong class="strong">Rebehayan</strong>
+    </section>
+    <section class="section5" style="--color: 200">
+      <strong>5</strong>
+    </section>
+  </body>
 </html>

@@ -1,6 +1,16 @@
 export const headerAnimation = () => {
+  const main = window.location.pathname.includes("main");
+  if (main) {
+    document.body.style.overflow = "hidden";
+  }
+
   const timeline = gsap
-    .timeline()
+    .timeline({
+      onComplete() {
+        // console.log("애니메이션 종료");
+        document.body.style.overflow = "visible"; // 애니메이션 끝난뒤에 스크롤 되게
+      },
+    })
     .fromTo(
       ".header",
       {
@@ -22,5 +32,13 @@ export const headerAnimation = () => {
     .from(".profile", {
       x: 100,
       opacity: 0,
+    })
+    .to(".idp h2", {
+      y: 100,
+      scrollTrigger: {
+        trigger: ".idp",
+        // markers: true,
+        start: " 100% center",
+      },
     });
 };

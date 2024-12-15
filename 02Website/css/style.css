@@ -419,6 +419,10 @@
       color: var(--blue);
       background-size: calc(100% - 100px) 7px;
     }
+    .gnb > ul > li:has(a:focus) > a {
+      color: var(--blue);
+      background-size: calc(100% - 100px) 7px;
+    }
     .gnb > ul > li .depth2 {
       position: absolute;
       left: 0;
@@ -439,9 +443,13 @@
       line-height: 2;
       letter-spacing: -0.8px;
     }
+    .gnb > ul > li ul a:focus,
     .gnb > ul > li ul a:hover {
       color: var(--blue);
       text-decoration: underline;
+    }
+    .gnb > ul:has(ul a:focus) .depth2 {
+      grid-template-rows: 1fr;
     }
     .gnb > ul:hover .depth2 {
       grid-template-rows: 1fr;
@@ -939,6 +947,14 @@
     .tab-type1 button.--active {
       color: var(--black);
     }
+    .tab-contents {
+      > div {
+        display: none;
+        &.--active {
+          display: block;
+        }
+      }
+    }
   }
   @layer Table {
     .table-type1 {
@@ -1152,28 +1168,19 @@
     position: fixed;
     inset: 0 0 auto 0;
     z-index: 100;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.1) calc(var(--headerHeight) - 1px),
-      rgba(255, 255, 255, 0.1) calc(var(--headerHeight) - 1px),
-      rgba(255, 255, 255, 0.1) var(--headerHeight),
-      var(--white) var(--headerHeight)
-    );
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) calc(var(--headerHeight) - 1px), rgba(255, 255, 255, 0.1) calc(var(--headerHeight) - 1px), rgba(255, 255, 255, 0.1) var(--headerHeight), var(--white) var(--headerHeight));
     height: var(--headerHeight);
     transition: 0.5s;
   }
   .header:has(.gnb > ul:hover) {
     height: calc(190px + var(--headerHeight));
   }
+  .header:has(.gnb > ul ul a:focus) {
+    height: calc(190px + var(--headerHeight));
+  }
   @keyframes header {
     100% {
-      background: linear-gradient(
-        to bottom,
-        rgb(0, 0, 0) calc(var(--headerHeight) - 1px),
-        rgba(255, 255, 255, 0.1) calc(var(--headerHeight) - 1px),
-        rgba(255, 255, 255, 0.1) var(--headerHeight),
-        var(--white) var(--headerHeight)
-      );
+      background: linear-gradient(to bottom, rgb(0, 0, 0) calc(var(--headerHeight) - 1px), rgba(255, 255, 255, 0.1) calc(var(--headerHeight) - 1px), rgba(255, 255, 255, 0.1) var(--headerHeight), var(--white) var(--headerHeight));
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     }
   }
@@ -1621,6 +1628,27 @@
   }
   .comment__write textarea:focus {
     outline: none;
+  }
+}
+
+.loading {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: #000;
+  text-align: center;
+  align-content: center;
+  font-size: 40px;
+  color: white;
+  strong {
+    display: block;
+  }
+  .progress-bar {
+    margin-inline: auto;
+    width: 0;
+    /* max-width: 50vw; */
+    height: 3px;
+    background-color: seagreen;
   }
 }
 
