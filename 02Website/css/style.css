@@ -1364,7 +1364,7 @@
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
-    z-index: 1000;
+    z-index: 50;
     margin-top: -379px;
     padding: 110px 99px;
     text-align: center;

@@ -28,6 +28,7 @@ includeHTML("/02Website/include/header.html", ".header").then(() => {
   // gsap
   headerAnimation();
 });
+
 // includeHTML("/rebehayan_javascript/02Website/include/footer.html", ".footer").then(() => { 깃경로
 includeHTML("/02Website/include/footer.html", ".footer").then(() => {
   // footer

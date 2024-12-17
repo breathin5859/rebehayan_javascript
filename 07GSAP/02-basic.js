@@ -8,7 +8,7 @@ gsap.to(".tween", {
   // width: "30%",
   // height: 100,
   color: "white",
-  rotation: 180,
+  rotation: 360,
 });
 
 /* -------------------------------------------------------------------------- */
@@ -19,7 +19,7 @@ gsap.to(".tween", {
 gsap.to(".delay", {
   x: 100,
   duration: 2,
-  // delay: 1,  // 조기시작에만 딜레이
+  delay: 1, // 초기시작에만 딜레이
   repeat: -1, // 무한
   yoyo: true, // 왔다갔다
   // repeatDelay:1, // 반복 마다 딜레이.
@@ -46,7 +46,7 @@ timeline.from(".stagger li", {
   y: 80,
   opacity: 0,
   duration: 1,
-  // stagger: 0.2, // 축약표현
+  // stagger: 0.2, // 축약표현, 기본이 each
   stagger: {
     each: 0.2, // 각각시간
     // amount: 2, // 총시간 (이안에서  1/n) , each 랑 같이 못쓰고 어마운트는 이렇게써야함

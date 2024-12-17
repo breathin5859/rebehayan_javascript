@@ -32,13 +32,5 @@ export const headerAnimation = () => {
     .from(".profile", {
       x: 100,
       opacity: 0,
-    })
-    .to(".idp h2", {
-      y: 100,
-      scrollTrigger: {
-        trigger: ".idp",
-        // markers: true,
-        start: " 100% center",
-      },
     });
 };

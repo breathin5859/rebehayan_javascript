@@ -5,9 +5,9 @@ export const tab = (id, option = {}) => {
   };
 
   // 전개연산자
-  const a = [1, 2, 3];
-  const b = [4, 5, 6];
-  console.log(...a, ...b); // 이어서 써짐
+  // const a = [1, 2, 3];
+  // const b = [4, 5, 6];
+  // console.log(...a, ...b); // 이어서 써짐
 
   const { activeClass } = config;
 

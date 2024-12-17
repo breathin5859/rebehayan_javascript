@@ -6,9 +6,9 @@ export const visualSwiper = () => {
     return;
   }
   const swiper = new Swiper(".visual-swiper", {
-    loop: true,
-    autoplay: {
-      delay: 3000,
-    },
+    // loop: true,
+    // autoplay: {
+    //   delay: 3000,
+    // },
   });
 };

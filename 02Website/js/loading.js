@@ -2,8 +2,13 @@ export const loading = () => {
   const images = document.querySelectorAll("img");
   // console.log(images);
 
-  const array = Array.from(images); // 유사배열을 배열화 시긴다음에 하는게 좋음
+  const array = Array.from(images); // 유사배열을 배열화 시킨다음에 하는게 좋음
   // console.log(array);
+
+  // 유효성검사 imagesLoaded 라이브러리
+  if (typeof imagesLoaded === "undefined") {
+    return;
+  }
   imagesLoaded(array)
     .on("progress", (state) => {
       // 진행중
