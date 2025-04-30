@@ -7,5 +7,37 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="./03-a11y.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div>
+      <canvas class="chart" role="img" aria-label="그래프입니다"></canvas>
+      <button>그래프를 표로보기</button>
+      <div class="a11y-hidden">
+        그래프 내용
+
+        <table>
+          <thead>
+            <th>색상</th>
+            <th>서울</th>
+            <th>부산</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>red</td>
+              <td>12</td>
+              <td>100</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <style>
+      .a11y-hidden {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        position: absolute;
+      }
+    </style>
+  </body>
 </html>

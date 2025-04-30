@@ -47,7 +47,7 @@ const blockAnimation = gsap.to(".block", {
   duration: 4,
 });
 
-ScrollTrigger.ScrollTrigger({
+ScrollTrigger.create({
   trigger: ".section3",
   start: "20% center",
   end: "40% 40%",

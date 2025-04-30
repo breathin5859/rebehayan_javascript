@@ -11,7 +11,7 @@ ScrollTrigger.create({
   start: "top top",
   end: "1000px center", // 유연하게 짜려면 스크립트로 오프셋으로 범위 받아서 .
   end: `${section2Height}px`,
-  // markers: true,
+  markers: true,
   pin: true,
   // pinType: " transform", // css로 포지션 충돌날때 피할수 있음
   pinSpacing: false,
